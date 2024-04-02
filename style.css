@@ -1,0 +1,14 @@
+#green{
+    background-color: green;
+    
+}
+.blue{
+    background-color: skyblue;
+}
+.red{
+    background-color: orangered;
+}
+
+#test{
+    display: none;
+}
