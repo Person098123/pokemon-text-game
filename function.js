@@ -1,7 +1,7 @@
 function hideFunction(){
     document.getElementById("start").style.display="none"
     document.getElementById("test").style.display="block"
-}
+};
 
 function timer(){
     var sec = 30;
@@ -12,8 +12,11 @@ function timer(){
              document.getElementById("start").style.display="none"
         }
     }, 1000);
-}
+};
 
-function fight(){
-    var hp = 15;
-}
+var hp= 1;
+function myFight(){
+        hp -= 1;
+        document.getElementById("hpfifth").innerhtml= hp;
+    
+};
