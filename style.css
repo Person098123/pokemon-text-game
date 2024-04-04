@@ -12,3 +12,7 @@
 #test{
     display: none;
 }
+
+#number{
+    border: solid;
+}

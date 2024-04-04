@@ -1,26 +1,32 @@
-<h6 class="askclient">How Many? <a id="clicks">1</a></h6>
-<button onClick="onClick()" type="button">ADD MORE</button>
-<button onClick="onUnClick()" type="button">X</button>
-<select id="ddlViewBy"  name="repetition[]" onChange="onChange(this)">
-   <option value="0">None</option>
-   <option value="1">1</option>
-   <option value="2">2</option>
-   <option value="3">3</option>
-   <option value="4">4</option>
-</select>
-<script>
-    var clicks = 1;
-    function onClick() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
-    function onUnClick() {
-        clicks -= 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
-    function onChange(elem) {
-        clicks += Number(elem.value);
-        document.getElementById("clicks").innerHTML = clicks;
-        document.getElementById("ddlViewBy").selectedIndex = 0;
-    }
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h6 class="askclient">How Many? <a id="clicks">1</a></h6>
+    <button onClick="onClick()" type="button">ADD MORE</button>
+    <button onClick="onUnClick()" type="button">X</button>
+    <select id="ddlViewBy"  name="repetition[]" onChange="onChange(this)">
+       <option value="0">None</option>
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+    </select>
+    <script>
+        var clicks = 1;
+        function onClick() {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+        };
+        function onUnClick() {
+            clicks -= 1;
+            document.getElementById("clicks").innerHTML = clicks;
+        };
+    
+    </script>  
+</body>
+</html>

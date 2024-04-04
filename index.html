@@ -17,7 +17,7 @@
     
     <button id="green" onclick="hideFunction()">Chespin</button>
     <button class="blue" id="safeTimerDisplay"onclick="timer()">Froakie</button>
-    <button class="red">Fennekin</button>
+    <button class="red" >Fennekin</button>
 </section>
 <section id="test">
 <p > You have chosen chespin while your rival has chosen fennikin. You now have to fight your rival in a 
@@ -27,7 +27,7 @@
 
 </section>
 <button id="fighttest" onclick="myFight()">attack</button>
-<h3><a id="hpfifth">15</a></h3>
+<h3><input id="hpfifth">1</input></h3>
 
 <section id="fight/runaway">
     <button>
@@ -36,7 +36,10 @@
     <button>
         Run away from the grunt
     </button>
-    
+    <form>
+        <input type="text" id="number" value="15"/>
+        <input type="button" onclick="incrementValue()" value="Increment Value" />
+     </form>
 </section>
 </body>
 </html>

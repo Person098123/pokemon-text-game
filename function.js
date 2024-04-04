@@ -14,9 +14,17 @@ function timer(){
     }, 1000);
 };
 
-var hp= 1;
-function myFight(){
-        hp -= 1;
-        document.getElementById("hpfifth").innerhtml= hp;
-    
-};
+
+function myFight(){ 
+        var hpfive = 1
+        hpfive -= 1;
+        document.getElementById("hpfifth").innerhtml= hpfive;
+    };
+
+    function incrementValue()
+    {
+        var value = parseInt(document.getElementById('number').value);
+        value = isNaN(value) ? 0 : value;
+        value--;
+        document.getElementById('number').value = value;
+    }
