@@ -15,16 +15,15 @@ function timer(){
 };
 
 
-function myFight(){ 
-        var hpfive = 1
-        hpfive -= 1;
-        document.getElementById("hpfifth").innerhtml= hpfive;
-    };
+
 
     function incrementValue()
     {
         var value = parseInt(document.getElementById('number').value);
         value = isNaN(value) ? 0 : value;
         value--;
-        document.getElementById('number').value = value;
+        document.getElementById('number').value = value
+        if(value==0){
+            document.getElementById("start").style.display="none"
+        }
     }
