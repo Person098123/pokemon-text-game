@@ -9,24 +9,32 @@
 </head>
 <body>
     <p></p>
-    <section id="start">
     <p>You have three choices to pick from for your starter, Froakie, Fennekin
         and Chespin. Choose wisely as this will be more important than you think for 
         your adventure.
     </p>
+    <section id="start">
+    
     
     <button id="green" onclick="hideFunction()">Chespin</button>
-    <button class="blue" id="safeTimerDisplay"onclick="timer()">Froakie</button>
+   
+    <button class="blue" >Froakie</button>
     <button class="red" >Fennekin</button>
-</section>
-<section id="test">
+
+  </section> 
+  
+  <section class="starter-img">
+    <img src="pokemon-sprites/chespin.png">
+    <img src="pokemon-sprites/frokie.png">
+    <img src="pokemon-sprites/fenniken.png"></section>
+<section id="ches-choose">
 <p > You have chosen chespin while your rival has chosen fennikin. You now have to fight your rival in a 
     pokemon battle.
 </p>
-<button onclick="timer()">Fight rival</button>
+<button id="safeTimerDisplay"  onclick="reveal(), timer()">Fight rival</button>
 
 </section>
-
+<p></p>
 
 <section id="fight/runaway">
     <button>
@@ -35,10 +43,15 @@
     <button>
         Run away from the grunt
     </button>
+</section>
+<section id="first-battle">
     <form>
         <input type="text" id="number" value="15"/>
-        <input type="button" onclick="incrementValue()" value="Increment Value" />
+        <input type="button" onclick="attack()" value="Attack" />
      </form>
 </section>
+<p id="nay"> You won your rival fight and give yourself a cheer. You then dicide to move on in your journey</p>
+<p id="yan"> You lost the battle and lay on tyhe floor in defeat</p>
+<button onclick="retry()">Try again?</button>
 </body>
 </html>

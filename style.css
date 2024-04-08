@@ -15,4 +15,26 @@
 
 #number{
     border: solid;
+    display: none;
+}
+
+#nay{
+    display: none;
+}
+
+#start{
+  display: flex;
+  justify-content: space-around;
+}
+
+.starter-img{
+    display: flex;
+    justify-content: space-around;
+}
+
+#ches-choose{
+    display: none;
+}
+#yan{
+    display: none;
 }
