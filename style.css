@@ -38,3 +38,15 @@
 #yan{
     display: none;
 }
+
+#safeTimerDisplay{
+    display: none;
+}
+
+#first-battle{
+    display: none;
+}
+
+#retry{
+    display:none;
+}
