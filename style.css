@@ -27,7 +27,7 @@
   justify-content: space-around;
 }
 
-.starter-img{
+#starter-img{
     display: flex;
     justify-content: space-around;
 }
@@ -35,6 +35,15 @@
 #ches-choose{
     display: none;
 }
+
+#froakie-choose{
+    display: none;
+}
+
+#fenn-choose{
+    display: none;
+}
+
 #yan{
     display: none;
 }

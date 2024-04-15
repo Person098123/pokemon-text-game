@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,48 +8,92 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="function.js"></script>
 </head>
+
 <body>
-    <p></p>
+    <section id="start_game">
+        <p>
+            You wake up in your bedroom in Vanville Town, before acquiring your starter Pokemon.
+        </p>
+        <button>Wake Up</button>
+    </section>
+
+    <section id="aquacorde_town">
+        <p>
+            You walk to Aquacorde Town, on a bright sunny day in the Kalos region.
+        </p>
+        <button>Enter Aquacorde Town</button>
+
+    </section>
+
+    <section id="meet_rival">
+        <p>
+
+        </p>
+    </section>
+
     <p>You have three choices to pick from for your starter, Froakie, Fennekin
-        and Chespin. Choose wisely as this will be more important than you think for 
+        and Chespin. Choose wisely as this will be more important than you think for
         your adventure.
     </p>
     <section id="start">
-    
-    
-    <button id="green" onclick="hideFunction()">Chespin</button>
-   
-    <button class="blue" >Froakie</button>
-    <button class="red" >Fennekin</button>
+        <button id="green" onclick="hideFunction()">Chespin</button>
+        <button class="blue" onclick="hideFunction()">Froakie</button>
+        <button class="red" onclick="hideFunction()"> Fennekin</button>
 
-  </section> 
-  
-  <section class="starter-img">
-    <img src="pokemon-sprites/chespin.png">
-    <img src="pokemon-sprites/frokie.png">
-    <img src="pokemon-sprites/fenniken.png"></section>
-<section id="ches-choose">
-<p > You have chosen chespin while your rival has chosen fennikin. You now have to fight your rival in a 
-    pokemon battle.
-</p>
-<button   onclick="reveal(), timer()">Fight rival</button>
+    </section>
 
-</section>
+    <section id="starter-img">
+        <img src="pokemon-sprites/chespin.png">
+        <img src="pokemon-sprites/frokie.png">
+        <img src="pokemon-sprites/fenniken.png">
+    </section>
 
-<p></p>
+    <section id="ches-choose">
+        <p> You have chosen chespin while your rival has chosen fennikin. You now have to fight your rival in a
+            pokemon battle.
+        </p>
+        <button onclick="reveal(), timer()">Fight rival</button>
 
-<section id="fight/runaway">
-   
-</section>
-<section id="first-battle">
-    <form>
-        <button id="safeTimerDisplay" >Time</button>
-        <input type="text" id="number" value="15"/>
-        <input type="button" onclick="attack()" value="Attack" />
-     </form>
-</section>
-<p id="nay"> You won your rival fight and give yourself a cheer. You then dicide to move on in your journey</p>
-<p id="yan"> You lost the battle and lay on the floor in defeat</p>
-<button id="retry"onclick="retry()">Try again?</button>
+    </section>
+
+    <section id="froakie-choose">
+        <p> You have chosen froakie while your rival has chosen fennikin. You now have to fight your rival in a
+            pokemon battle.
+        </p>
+        <button onclick="reveal(), timer()">Fight rival</button>
+
+    </section>
+
+    <section id="fenn-choose">
+        <p> You have chosen fenniken while your rival has chosen fennikin. You now have to fight your rival in a
+            pokemon battle.
+        </p>
+        <button onclick="reveal(), timer()">Fight rival</button>
+
+    </section>
+
+
+    <section id="fight/runaway">
+
+    </section>
+    <section id="first-battle">
+        <form>
+            <button id="safeTimerDisplay" value="30">Time</button>
+            <input type="text" id="number" value="15" />
+            <input type="button" onclick="attack()" value="Attack" />
+        </form>
+    </section>
+    <p id="nay"> You won your rival fight and give yourself a cheer. You then dicide to move on in your journey</p>
+    <p id="yan"> You lost the battle and scurry back to your room to heal your Pokemon.</p>
+    <button id="retry" onclick="retry()">Try again?</button>
+    <section id="grunt_battle">
+        <p>After a fight with your rival, you encounter a Team Flare grunt. The Team Flare grunt threatens to take your
+            Pokemon.
+        </p>
+        <button>Fight Grunt</button>
+    </section>
+    <p> You won the fight agains the Team Flare grunt!</p>
+    <p> You lost the battle and head back to your room to heal your Pokemon.</p>
 </body>
+
 </html>
