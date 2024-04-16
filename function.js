@@ -1,31 +1,38 @@
 
-function hideFunction() {
-    var ches = document.getElementById("green").innerHTML;
-    var fenn = document.getElementById("red").innerHTML;
-    var froa = document.getElementById("blue").innerHTML;
+function startGame(){
+    document.getElementById("start_game").style.display = "none";
+    document.getElementById("aquacorde_town").style.display = "block";
+}
 
-    if (ches) {
-        document.getElementById("start").style.display = "none";
+function aquacordeTown(){
+    document.getElementById("aquacorde_town").style.display = "none";
+    document.getElementById("choose").style.display = "block";
+}
+
+function hideFunctionGreen() {
+        document.getElementById("choose").style.display = "none";
         document.getElementById("starter-img").style.display = "none";
         document.getElementById("ches-choose").style.display = "block";
-    }
-
-    if (froa){
-        document.getElementById("start").style.display = "none";
-        document.getElementById("starter-img").style.display = "none";
-        document.getElementById("froakie-choose").style.display = "block";
-    }   
     
-    if (fenn){
-        document.getElementById("start").style.display = "none";
-        document.getElementById("starter-img").style.display = "none";
-        document.getElementById("fenn-choose").style.display = "block";
-    }
-
-   
 };
 
-//this sets the timer for the battle function changing whaterver text 
+function hideFunctionBlue(){
+        document.getElementById("choose").style.display = "none";
+        document.getElementById("starter-img").style.display = "none";
+        document.getElementById("froakie-choose").style.display = "block";
+    }  
+
+
+function hideFunctionRed(){
+        document.getElementById("choose").style.display = "none";
+        document.getElementById("starter-img").style.display = "none";
+        document.getElementById("fenn-choose").style.display = "block";
+    
+}
+   
+
+
+//this sets the timer for the battle function for the first battle of the game. It counts down by one untill it reaches zero and displays the corrisponding text
 var sec = 30;
 function timer() {
     var timers = setInterval(function () {
@@ -46,10 +53,10 @@ function timer() {
 Z
 
 
-    }, 200);
+    }, 800);
 };
 var value = parseInt(document.getElementById('number').value);
-//code for making buttons dissapear
+//This code makes are attack button work when a battle starts where one click substracts one hp untill hp reaches zero and the journey continues
 function attack() {
     var value = parseInt(document.getElementById('number').value);
     value = isNaN(value) ? 0 : value;
@@ -60,7 +67,8 @@ function attack() {
         document.getElementById("yan").style.display = "none";
         document.getElementById('safeTimerDisplay').style.display = "none";
         document.getElementById("first-battle").style.display = "none";
-        sec = 30
+        document.getElementById("continue").style.display = "block";
+        sec = 9999999
         clearInterval(timers)
 
     }
@@ -77,8 +85,65 @@ function reveal() {
 }
 
 function retry() {
-    document.getElementById("ches-choose").style.display = "block"
+    document.getElementById("ches-choose").style.display = "block";
     document.getElementById('retry').style.display = "none";
     document.getElementById("yan").style.display = "none";
 };
 
+function revealBady(){
+    document.getElementById("nay").style.display = "none";
+    document.getElementById("continue").style.display = "none";
+    document.getElementById("grunt_battle").style.display = "block";
+    document.getElementById("baadyFight").style.display = "block";
+    document.getElementById("won").style.display = "none";
+    document.getElementById("lost").style.display = "none";
+    document.getElementById("second-battle").style.display = "none";
+}
+
+var sec = 30;
+function timer2() {
+    var timers = setInterval(function () {
+        document.getElementById('safeTimerDisplay').innerHTML = 'Time: 00:' + sec;
+        sec--;
+
+        if (sec <= 0) {
+            document.getElementById("lost").style.display = "block";
+            document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + sec;
+            document.getElementById("second-battle").style.display = "none";
+            document.getElementById('safeTimerDisplaytwo').style.display = "none";
+            document.getElementById('retry').style.display = "block";
+            sec = 30
+            clearInterval(timers)
+            document.getElementById('number').value = 20;
+
+        }
+Z
+
+
+    }, 800);
+};
+var value = parseInt(document.getElementById('numbertwo').value);
+//This code makes are attack button work when a battle starts where one click substracts one hp untill hp reaches zero and the journey continues
+function attack2() {
+    var value = parseInt(document.getElementById('numbertwo').value);
+    value = isNaN(value) ? 0 : value;
+    value--;
+    document.getElementById('numbertwo').value = value
+    if (value == 0) {
+        document.getElementById("won").style.display = "block";
+        document.getElementById("lost").style.display = "none";
+        document.getElementById('safeTimerDisplaytwo').style.display = "none";
+        document.getElementById("second-battle").style.display = "none";
+        document.getElementById("continue").style.display = "block";
+        sec = 9999999
+        clearInterval(timers)
+
+    }
+}
+
+function reveal2() {
+    document.getElementById("numbertwo").style.display = "block"
+    document.getElementById("badyfight").style.display = "none";
+    document.getElementById("safeTimerDisplaytwo").style.display = "block";
+    document.getElementById("second-battle").style.display = "block";
+}

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Text Adventure Game</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pokemon-sprites/pokeball_favicon-removebg-preview.png">
+
     <script src="function.js"></script>
 </head>
 
@@ -14,14 +16,14 @@
         <p>
             You wake up in your bedroom in Vanville Town, before acquiring your starter Pokemon.
         </p>
-        <button>Wake Up</button>
+        <button onclick="startGame()">Wake Up</button>
     </section>
 
     <section id="aquacorde_town">
         <p>
             You walk to Aquacorde Town, on a bright sunny day in the Kalos region.
         </p>
-        <button>Enter Aquacorde Town</button>
+        <button onclick="aquacordeTown()">Enter Aquacorde Town</button>
 
     </section>
 
@@ -31,23 +33,25 @@
         </p>
     </section>
 
-    <p>You have three choices to pick from for your starter, Froakie, Fennekin
-        and Chespin. Choose wisely as this will be more important than you think for
-        your adventure.
-    </p>
-    <section id="start">
-        <button id="green" onclick="hideFunction()">Chespin</button>
-        <button class="blue" onclick="hideFunction()">Froakie</button>
-        <button class="red" onclick="hideFunction()"> Fennekin</button>
 
+    <section id="choose">
+        <p>You have three choices to pick from for your starter, Froakie, Fennekin
+            and Chespin. Choose wisely as this will be more important than you think for
+            your adventure.
+        </p>
+        <section id="starter">
+            <button id="green" onclick="hideFunctionGreen()">Chespin</button>
+            <button id="blue" onclick="hideFunctionBlue()">Froakie</button>
+            <button id="red" onclick="hideFunctionRed()"> Fennekin</button>
+
+        </section>
+
+        <section id="starter-img">
+            <img src="pokemon-sprites/chespin.png">
+            <img src="pokemon-sprites/frokie.png">
+            <img src="pokemon-sprites/fenniken.png">
+        </section>
     </section>
-
-    <section id="starter-img">
-        <img src="pokemon-sprites/chespin.png">
-        <img src="pokemon-sprites/frokie.png">
-        <img src="pokemon-sprites/fenniken.png">
-    </section>
-
     <section id="ches-choose">
         <p> You have chosen chespin while your rival has chosen fennikin. You now have to fight your rival in a
             pokemon battle.
@@ -65,7 +69,7 @@
     </section>
 
     <section id="fenn-choose">
-        <p> You have chosen fenniken while your rival has chosen fennikin. You now have to fight your rival in a
+        <p> You have chosen fenniken while your rival has chosen froakie. You now have to fight your rival in a
             pokemon battle.
         </p>
         <button onclick="reveal(), timer()">Fight rival</button>
@@ -78,7 +82,7 @@
     </section>
     <section id="first-battle">
         <form>
-            <button id="safeTimerDisplay" value="30">Time</button>
+            <button id="safeTimerDisplay" value="30">Time 00:30</button>
             <input type="text" id="number" value="15" />
             <input type="button" onclick="attack()" value="Attack" />
         </form>
@@ -86,14 +90,63 @@
     <p id="nay"> You won your rival fight and give yourself a cheer. You then dicide to move on in your journey</p>
     <p id="yan"> You lost the battle and scurry back to your room to heal your Pokemon.</p>
     <button id="retry" onclick="retry()">Try again?</button>
+    <button id="continue" onclick="revealBady()">continue on</button>
+
     <section id="grunt_battle">
-        <p>After a fight with your rival, you encounter a Team Flare grunt. The Team Flare grunt threatens to take your
+        <section id='badyfight'>
+        <p id="badytext">After a fight with your rival, you encounter a Team Flare grunt. The Team Flare grunt threatens
+            to take your
             Pokemon.
         </p>
-        <button>Fight Grunt</button>
+        <button id="fight_grunt" onclick="reveal2(), timer2()">Fight Grunt</button>
     </section>
-    <p> You won the fight agains the Team Flare grunt!</p>
-    <p> You lost the battle and head back to your room to heal your Pokemon.</p>
+
+    <section id="second-battle">
+        <button id="safeTimerDisplaytwo" value="30">Time 00:30</button>
+        <input type="text" id="numbertwo" value="20" />
+        <input type="button" onclick="attack2()" value="Attack" />
+    </section>
+    
+        <p id="won"> You won the fight agains the Team Flare grunt!</p>
+        <p id="lost"> You lost the battle and head back to your room to heal your Pokemon.</p>
+    </section>
+
+    <!--Join Team Flare Pathway-->
+    <section id="join_flare">
+        <p>Team Flare has asked you to join them in their goal in taking over Kalos!</p>
+        <button id="join_flare">Join Team Flare</button>
+        <button id="refuse_flare">Refuse</button>
+
+
+        <p>The grunt takes you to Team Flare's hideout.</p>
+        <button id="follow_grunt">Follow Team Flare Grunt</button>
+
+        <p>The Team Flare grunt takes you to their base for training. You are informed your next mission is to steal
+            Pokemon
+            from Glittering Cave.</p>
+        <button id="glittering_cave">Follow grunt into Glittering Cave.</button>
+
+        <p>You get lost while wandering around Glittering Cave</p>
+        <button id="head_straight">Head straight</button>
+
+        <p>You battle your rival, winning in the fight. </p>
+        <button></button>
+
+    </section>
+
+    <!--Against Team Flare Pathway-->
+    <section id="refuse_flare">
+        <p>You refused the proposal to take over Kalos. You and your rival make a vow to take down Team Flare. You
+            decide to chase after the grunt in Santalune Forest.</p>
+        <button>
+            Chase after the grunt in Santalune Forest.
+        </button>
+
+        <p>You find yourself lost in the forest, wandering aimlesly.</p>
+        <button>Wander around the forest</button>
+    </section>
+
 </body>
+
 
 </html>

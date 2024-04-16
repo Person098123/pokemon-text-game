@@ -2,10 +2,10 @@
     background-color: green;
     
 }
-.blue{
+#blue{
     background-color: skyblue;
 }
-.red{
+#red{
     background-color: orangered;
 }
 
@@ -22,7 +22,7 @@
     display: none;
 }
 
-#start{
+#starter{
   display: flex;
   justify-content: space-around;
 }
@@ -57,5 +57,21 @@
 }
 
 #retry{
+    display:none;
+}
+
+#aquacorde_town{
+    display:none;
+}
+
+#choose{
+    display: none;
+}
+
+#grunt_battle{
+    display: none;
+}
+
+#continue{
     display:none;
 }
