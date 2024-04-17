@@ -50,12 +50,12 @@ function timer() {
             document.getElementById('number').value = 15;
 
         }
-Z
 
 
-    }, 800);
+
+    }, 700);
 };
-var value = parseInt(document.getElementById('number').value);
+
 //This code makes are attack button work when a battle starts where one click substracts one hp untill hp reaches zero and the journey continues
 function attack() {
     var value = parseInt(document.getElementById('number').value);
@@ -94,36 +94,35 @@ function revealBady(){
     document.getElementById("nay").style.display = "none";
     document.getElementById("continue").style.display = "none";
     document.getElementById("grunt_battle").style.display = "block";
-    document.getElementById("baadyFight").style.display = "block";
+    document.getElementById("badyfight").style.display = "block";
     document.getElementById("won").style.display = "none";
     document.getElementById("lost").style.display = "none";
-    document.getElementById("second-battle").style.display = "none";
 }
 
-var sec = 30;
+var secs=30;
 function timer2() {
-    var timers = setInterval(function () {
-        document.getElementById('safeTimerDisplay').innerHTML = 'Time: 00:' + sec;
-        sec--;
+    
+    var timerss = setInterval(function () {
+        document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + secs;
+        secs--;
 
-        if (sec <= 0) {
+        if (secs <= 0) {
             document.getElementById("lost").style.display = "block";
-            document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + sec;
+            document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + secs;
             document.getElementById("second-battle").style.display = "none";
             document.getElementById('safeTimerDisplaytwo').style.display = "none";
-            document.getElementById('retry').style.display = "block";
-            sec = 30
-            clearInterval(timers)
-            document.getElementById('number').value = 20;
+            secs = 30;
+            clearInterval(timerss);
+            document.getElementById('numbertwo').value = 20;
 
         }
-Z
 
 
-    }, 800);
+
+    }, 700);
 };
-var value = parseInt(document.getElementById('numbertwo').value);
-//This code makes are attack button work when a battle starts where one click substracts one hp untill hp reaches zero and the journey continues
+
+//This code makes are attack button work when a battle starts where one click substracts one hp untill hp reaches zero and then the next code plays
 function attack2() {
     var value = parseInt(document.getElementById('numbertwo').value);
     value = isNaN(value) ? 0 : value;
@@ -134,9 +133,9 @@ function attack2() {
         document.getElementById("lost").style.display = "none";
         document.getElementById('safeTimerDisplaytwo').style.display = "none";
         document.getElementById("second-battle").style.display = "none";
-        document.getElementById("continue").style.display = "block";
-        sec = 9999999
-        clearInterval(timers)
+       
+        secs = 9999999
+        clearInterval(timerss)
 
     }
 }
@@ -146,4 +145,10 @@ function reveal2() {
     document.getElementById("badyfight").style.display = "none";
     document.getElementById("safeTimerDisplaytwo").style.display = "block";
     document.getElementById("second-battle").style.display = "block";
+    
+}
+
+function retry2(){
+    document.getElementById("badyfight").style.display = "block";
+    document.getElementById("lost").style.display = "none";
 }
