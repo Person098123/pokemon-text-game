@@ -152,3 +152,22 @@ function retry2(){
     document.getElementById("badyfight").style.display = "block";
     document.getElementById("lost").style.display = "none";
 }
+
+function letHimCook(){
+    document.getElementById("join_flare").style.display = "block";
+    document.getElementById("won").style.display = "none";
+    document.getElementById("follow_grunt").style.display = "none";
+        document.getElementById('glittering_cave').style.display = "none";
+        document.getElementById("head_straight").style.display = "none";
+       
+}
+
+function JoinChoice(){
+    document.getElementById("follow-grunt").style.display = "block"
+    document.getElementById("badyfight").style.display = "none";
+
+}
+
+function refuseChoice(){
+
+}
