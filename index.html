@@ -83,7 +83,7 @@
     <section id="first-battle">
         <form>
             <button id="safeTimerDisplay" value="30">Time 00:30</button>
-            <input type="text" id="number" value="15" />
+            <input type="text" id="number" value="5" />
             <input type="button" onclick="attack()" value="Attack" />
         </form>
     </section>
@@ -94,56 +94,74 @@
 
     <section id="grunt_battle">
         <section id='badyfight'>
-        <p id="badytext">After a fight with your rival, you encounter a Team Flare grunt. The Team Flare grunt threatens
-            to take your Pokemon.
-        </p>
-        <button id="fight_grunt" onclick="reveal2(), timer2()">Fight Grunt</button>
-    </section>
+            <p id="badytext">After a fight with your rival, you encounter a Team Flare grunt. The Team Flare grunt
+                threatens
+                to take your Pokemon.
+            </p>
+            <button id="fight_grunt" onclick="reveal2(), timer2()">Fight Grunt</button>
+        </section>
 
-    <section id="second-battle">
-        <button id="safeTimerDisplaytwo" >Time 00:30</button>
-        <input type="text" id="numbertwo" value="20" />
-        <input type="button" onclick="attack2()" value="Attack" />
-    </section>
-    
-        <p id="won"> You won the fight agains the Team Flare grunt! As you celebrate the deafeted grunt has something to say to you <br> <br> <button onclick="letHimCook()"> hear him out</button></p>
-        <p id="lost"> You lost the battle and head back to your room to heal your Pokemon. <br> <br> <button onclick="retry2()">heal and try again</button>
+        <section id="second-battle">
+            <button id="safeTimerDisplaytwo">Time 00:30</button>
+            <input type="text" id="numbertwo" value="5" />
+            <input type="button" onclick="attack2()" value="Attack" />
+        </section>
+
+        <p id="won"> You won the fight agains the Team Flare grunt! As you celebrate the deafeted grunt has something to
+            say to you <br> <br> <button onclick="lethimcook()"> hear him out</button></p>
+        <p id="lost"> You lost the battle and head back to your room to heal your Pokemon. <br> <br> <button
+                onclick="retry2()">heal and try again</button>
         </p>
     </section>
 
     <!--Join Team Flare Pathway-->
     <section id="join_flare">
-        <p> The grunt admires your strength and how easy it was to defeat him so the Team Flare grunt has asked you to join them and help complete their goal in taking over Kalos!</p>
-        <button id="join_flare">Join Team Flare</button>
-        <button id="refuse_flare">Refuse</button>
+        <p id="purposal-text"> The grunt admires your strength and how easy it was to defeat him so the Team Flare grunt
+            has asked you to join them and help complete their goal in taking over Kalos!</p>
+        <button id="join-flare" onclick="joinChoice()">Join Team Flare</button> <br>
+        <button id="refuse-flare" onclick="refuseChoice()">Refuse</button>
 
-
-        <p>You decided to join Team Flare and the grunt takes you to Team Flare's hideout.</p>
+        <p id="accept-pur">You decided to join Team Flare and the grunt takes you to Team Flare's hideout.</p>
         <button id="follow_grunt">Follow Team Flare Grunt</button>
 
-        <p>The Team Flare grunt takes you to their base for training. You are informed your next mission is to steal
+        <p id="first-mission">The Team Flare grunt takes you to their base for training. You are informed your next
+            mission is to steal
             Pokemon
             from Glittering Cave.</p>
         <button id="glittering_cave">Follow grunt into Glittering Cave.</button>
 
-        <p>You get lost while wandering around Glittering Cave</p>
+        <p id="lost_cave">You get lost while wandering around Glittering Cave</p>
         <button id="head_straight">Head straight</button>
 
-        <p>You battle your rival, winning in the fight. </p>
-        <button></button>
+        <p id="rematch">You battle your rival, winning in the fight. </p>
+        <button id="beaten">Continue</button>
+
+        <p id="take_over">Time passed after fighting your rival, as you head back to the Team Flare base.</p>
+        <button id="base">Return to Team Flare Base</button>
+
+        <p id="rival_battle">Upon returning to Team Flare's base, you encounter Professor Sycammore and your rival who
+            tries to stop you.</p>
+        <button id="battle_prof">Battle<button>
+            <!--This will show up after winning-->
+                <p id="win_battle">You win and your rival has no more Pokemon left to fight. Team Flare's goal is
+                    complete and Kalos is rebuilt in their image.</p>
 
     </section>
 
     <!--Against Team Flare Pathway-->
     <section id="refuse_flare">
-        <p>You refused the proposal to take over Kalos. You and your rival make a vow to take down Team Flare. You
+        <p id="deny-pur">You refused the proposal to take over Kalos. You and your rival make a vow to take down Team
+            Flare. You
             decide to chase after the grunt in Santalune Forest.</p>
-        <button>
+        <button id="chasing">
             Chase after the grunt in Santalune Forest.
         </button>
 
-        <p>You find yourself lost in the forest, wandering aimlesly.</p>
-        <button>Wander around the forest</button>
+        <p id="aimless">You find yourself lost in the forest, wandering aimlesly.</p>
+        <button id="wandering">Wander around the forest</button>
+        
+        <p id="blackout">After you find the grunt, you battle the grunt.</p>
+        <button id="blackout_battle">If you</button>
     </section>
 
 </body>

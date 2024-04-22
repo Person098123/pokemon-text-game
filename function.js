@@ -153,21 +153,41 @@ function retry2(){
     document.getElementById("lost").style.display = "none";
 }
 
-function letHimCook(){
+function lethimcook(){
     document.getElementById("join_flare").style.display = "block";
+    document.getElementById("refuse-flare").style.display = "block";
+    document.getElementById("join-flare").style.display = "block";
     document.getElementById("won").style.display = "none";
     document.getElementById("follow_grunt").style.display = "none";
-        document.getElementById('glittering_cave').style.display = "none";
-        document.getElementById("head_straight").style.display = "none";
+    document.getElementById('glittering_cave').style.display = "none";
+    document.getElementById("head_straight").style.display = "none";
+    document.getElementById("accept-pur").style.display = "none";
+    document.getElementById("first-mission").style.display = "none";
+    document.getElementById('head_straight').style.display = "none";
+    document.getElementById("lost_cave").style.display = "none";
+    document.getElementById("rematch").style.display = "none";
+    document.getElementById("beaten").style.display = "none";
        
 }
 
-function JoinChoice(){
-    document.getElementById("follow-grunt").style.display = "block"
-    document.getElementById("badyfight").style.display = "none";
+function joinChoice(){
+    document.getElementById("purposal-text").style.display = "none";
+    document.getElementById("refuse-flare").style.display = "none";
+    document.getElementById("join-flare").style.display = "none";
+    document.getElementById("follow_grunt").style.display = "block"
+    document.getElementById("accept-pur").style.display = "block";
 
 }
 
 function refuseChoice(){
-
+    document.getElementById("purposal-text").style.display = "none";
+    document.getElementById("refuse-flare").style.display = "none";
+    document.getElementById("join-flare").style.display = "none";
+    document.getElementById("wandering").style.display = "none";
+    document.getElementById("aimless").style.display = "none";
+    document.getElementById("chasing").style.display = "block"
+    document.getElementById("deny-pur").style.display = "block";
+    document.getElementById("chasing").style.display = "block"
+    document.getElementById("refuse_flare").style.display = "block"
+  
 }
