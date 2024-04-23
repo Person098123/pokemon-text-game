@@ -167,7 +167,11 @@ function lethimcook(){
     document.getElementById("lost_cave").style.display = "none";
     document.getElementById("rematch").style.display = "none";
     document.getElementById("beaten").style.display = "none";
-       
+    document.getElementById("take_over").style.display = "none";
+    document.getElementById("base").style.display = "none";   
+    document.getElementById("rival_battle").style.display = "none";
+    document.getElementById("battle_prof").style.display = "none";
+    document.getElementById("evil_end").style.display = "none";
 }
 
 function joinChoice(){
@@ -185,9 +189,11 @@ function refuseChoice(){
     document.getElementById("join-flare").style.display = "none";
     document.getElementById("wandering").style.display = "none";
     document.getElementById("aimless").style.display = "none";
+    document.getElementById("blackout").style.display = "none";
+    document.getElementById("blackout_battle").style.display = "none";
     document.getElementById("chasing").style.display = "block"
     document.getElementById("deny-pur").style.display = "block";
-    document.getElementById("chasing").style.display = "block"
-    document.getElementById("refuse_flare").style.display = "block"
+    document.getElementById("chasing").style.display = "block";
+    document.getElementById("refuse_flare").style.display = "block";
   
 }
