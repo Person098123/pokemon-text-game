@@ -108,10 +108,120 @@
         </section>
 
         <p id="won"> You won the fight agains the Team Flare grunt! As you celebrate the deafeted grunt has something to
-            say to you <br> <br> <button onclick="lethimcook()"> hear him out</button></p>
+            say to you <br> <br> <button onclick="letHimCook()"> hear him out</button></p>
         <p id="lost"> You lost the battle and head back to your room to heal your Pokemon. <br> <br> <button
                 onclick="retry2()">heal and try again</button>
         </p>
+    </section>
+
+    <!--Becoming the champion of Kalos-->
+    <section id="champion_pathway">
+        <section class="gym_one">
+            <p id="champion">You've decided to take on the challenge of becoming Kalos' champion.
+            </p>
+
+            <button id="gym-battle">Enter the first gym.</button>
+            <p id="gym-one">You enter the first Pokemon gym. After entering the gyn, you are greeted by a representitive
+                who
+                explains what you need to do to get to the gym leader.</p>
+            <button id="battle-one">Battle</button>
+
+            <p id="gym-one-won">You won the first Pokemon battle of the gym! The representitive takes you to the 2nd
+                trainer,</p>
+            <button id="battle-two">Battle</button>
+
+            <p id="gym-one-two">You head onto the 2nd gym battle.</p>
+            <button id="gym-battle-two">Battle</button>
+
+            <p id="gym-won">You defeated all the trainers in this gym! You can now head onto battling the gym leader!
+            </p>
+            <button id="Gym-Leader-One">Battle</button>
+
+            <p id="gym-badge-one">You've succesfully won this battle! You now have the 1st gym badge!</p>
+        </section>
+
+
+        <section class="gym_two">
+            <p id="enter-gym-two">After winning your first gym badge, you head onto the 2nd gym of the Kalos region.
+            </p>
+
+            <button id="gym-battle">Enter the second gym.</button>
+            <p id="gym-one">You enter the second Pokemon gym. Since you've gone through the first gym, the
+                representitive takes you right to the 1st trainer.</p>
+            <button id="gym-two-battle">Battle</button>
+
+            <p id="gym-two-won">You won the first Pokemon battle of the gym! The representitive takes you to the 2nd
+                trainer.</p>
+            <button id="fight-two">Battle</button>
+
+            <p id="gym-two-three">You head onto the 3nd gym battle.</p>
+            <button id="fight-three">Battle</button>
+
+            <p id="gym-won-two">You defeated all the trainers in this gym! You can now head onto battling the gym
+                leader!</p>
+            <button id="Gym-Leader-Two">Battle</button>
+
+            <p id="gym-badge-two">You've succesfully won this battle! You now have the 2nd gym badge!</p>
+
+            <p id="reveal-progress">The gym representitive congratulates you for acquiring two gym badges. He then
+                explains you have two more gym battles to get through before fighting the Elite Four.</p>
+            <button id="continue-challenge">Continue</button>
+        </section>
+
+
+        <section class="gym_three">
+            <p id="enter-gym-two">After winning your first gym badge, you head onto the 2nd gym of the Kalos region.
+            </p>
+
+            <button id="gym-battle">Enter the second gym.</button>
+            <p id="gym-one">You enter the second Pokemon gym. Since you've gone through the first gym, the
+                representitive takes you right to the 1st trainer.</p>
+            <button id="gym-two-battle">Battle</button>
+
+            <p id="gym-two-won">You won the first Pokemon battle of the gym! The representitive takes you to the 2nd
+                trainer.</p>
+            <button id="fight-two">Battle</button>
+
+            <p id="gym-two-three">You head onto the 3rd gym battle.</p>
+            <button id="fight-three">Battle</button>
+
+            <p id="gym-won-two">You defeated all the trainers in this gym! You can now head onto battling the gym
+                leader!</p>
+            <button id="Gym-Leader-Two">Battle</button>
+
+            <p id="gym-badge-two">You've succesfully won this battle! You now have the 2nd gym badge!</p>
+
+            <button id="continue-challenge-three">Continue</button>
+        </section>
+
+
+        <section class="gym_four">
+            <p id="enter-gym-two">After winning your first gym badge, you head onto the final gym of the Kalos region.
+            </p>
+
+            <button id="gym-battle">Enter the second gym.</button>
+            <p id="gym-one">You enter the second Pokemon gym. Since you've gone through the first gym, the
+                representitive takes you right to the 1st trainer.</p>
+            <button id="gym-two-battle">Battle</button>
+
+            <p id="gym-two-won">You won the first Pokemon battle of the gym! The representitive takes you to the 2nd
+                trainer.</p>
+            <button id="fight-two">Battle</button>
+
+            <p id="gym-two-three">You head onto the 3nd gym battle.</p>
+            <button id="fight-three">Battle</button>
+
+            <p id="gym-won-two">You defeated all the trainers in this gym! You can now head onto battling the gym
+                leader!</p>
+            <button id="Gym-Leader-Two">Battle</button>
+
+            <p id="gym-badge-two">You've succesfully won this battle! You now have the 2nd gym badge!</p>
+
+            <p id="reveal-progress">The gym representitive congratulates you for acquiring two gym badges. He then
+                explains you have two more gym battles to get through before fighting the Elite Four.</p>
+            <button id="final-challenge">Continue</button>
+        </section>
+
     </section>
 
     <!--Join Team Flare Pathway-->
@@ -122,16 +232,51 @@
         <button id="refuse-flare" onclick="refuseChoice()">Refuse</button>
 
         <p id="accept-pur">You decided to join Team Flare and the grunt takes you to Team Flare's hideout.</p>
-        <button id="follow_grunt">Follow Team Flare Grunt</button>
+        <button id="follow_grunt" onclick="followFlare()">Follow Team Flare Grunt</button>
 
         <p id="first-mission">The Team Flare grunt takes you to their base for training. You are informed your next
             mission is to steal
             Pokemon
             from Glittering Cave.</p>
-        <button id="glittering_cave">Follow grunt into Glittering Cave.</button>
+        <button id="glittering_cave" onclick="cave()">Follow grunt into Glittering Cave.</button>
 
         <p id="lost_cave">You get lost while wandering around Glittering Cave</p>
-        <button id="head_straight">Head straight</button>
+        <button id="head_straight" onclick="puzzle1()">Head straight</button>
+        <section id="puzzle-partone">
+        <p>You find yourself between four paths in the cave, "<strong>I don't know how</strong> to pass this" you say to yourself but your will give it a try</p>
+
+        <button id="path-one" onclick="right1()"> path 1</button> <button id="path-two" onclick="wrongChoice()"> path 2</button> <button id="path-three" onclick="wrongChoice()">path 3</button> <button id="path-four" onclick="wrongChoice()"> path 4</button>   
+        </section>
+
+        <section id="puzzle-parttwo">
+            <p>You belive where your going is right but there are 4 more paths to go through</p>
+        <button id="path-one" onclick="wrongChoice()"> path 1</button> <button id="path-two" onclick="wrongChoice()"> path 2</button> <button id="path-three" onclick="wrongChoice()">path 3</button> <button id="path-four" onclick="right2()"> path 4</button>  
+            
+        </section>
+            <p> You feel more sure of your progress but everything lloks the same and there four even more paths to choose from</p>
+        <section id="puzzle-partthree">
+        <button id="path-one" onclick="wrongChoice()"> path 1</button> <button id="path-two" onclick="wrongChoice()"> path 2</button> <button id="path-three" onclick="wrongChoice()">path 3</button> <button id="path-four" onclick="right3()"> path 4</button>
+            
+        </section>
+
+        
+        <section id="puzzle-partfour">
+            <p>You have a gut feeling that this is the final scretch to get pass these paths. One more set of four paths</p>
+            <button id="path-one" onclick="wrongChoice()"> path 1</button> <button id="path-two" onclick="wrongChoice()"> path 2</button> <button id="path-three" onclick="right4()">path 3</button> <button id="path-four" onclick="wrongChoice()"> path 4</button>
+                
+            </section>
+
+        <section id="pass-puzzle">
+        <p>After much trial and tribulation you find your way pass the corridor of caves. As you move on you find your rival also in the cave, remembering your assignment
+            you grin as you confront your rival
+        </p>
+            
+        </section>
+
+        <section id="fail-puzzle">
+            <p> You are completely lost and are even more lost than you were ever before</p>
+            <button onclick="retrace()"> retrace your steps</button>
+        </section>
 
         <p id="rematch">You battle your rival, winning in the fight. </p>
         <button id="beaten">Continue</button>
@@ -142,7 +287,7 @@
         <p id="rival_battle">Upon returning to Team Flare's base, you encounter Professor Sycammore and your rival who
             tries to stop you.</p>
         <button id="battle_prof">Battle<button>
-            <!--This will show up after winning-->
+                <!--This will show up after winning-->
                 <p id="evil_end">You win and your rival has no more Pokemon left to fight. Team Flare's goal is
                     complete and Kalos is rebuilt in their image.</p>
 
@@ -159,9 +304,33 @@
 
         <p id="aimless">You find yourself lost in the forest, wandering aimlesly.</p>
         <button id="wandering">Wander around the forest</button>
-        
+
         <p id="blackout">After you find the grunt, you battle the grunt.</p>
-        <button id="blackout_battle">If you</button>
+        <button id="blackout_battle">Battle</button>
+
+        <p id="capture">You blacked out and got captured by Team Flare.</p>
+        <button id="wake-up">Wake Up</button>
+
+        <p id="flare-cell">You overhear Team Flare's plan for a weapon that could destroy the Kalos Region.</p>
+        <button id="listen_in">Escape</button>
+
+        <p id="escape-cell">After unlocking the cell doors, you have two decisions: Stay in the cell, leave the cell and
+            escape.</p>
+        <button id="cell-stay">Stay in the Cell</button>
+
+        <p id="leave-cell">You decided to leave the cell. After leaving, you see Team Flare's leader, Lysandre. He says
+            nothing will get in his way of completing his mission of taking over Kalos.</p>
+        <button id="cell-leave">Battle Lysandre</button>
+
+
+        <p id="lysandre-battle">After winning the battle, you and your rival disarm the device and celebrate as you
+            successfully saved Kalos from destruction and chaos.</p>
+
+        <p id="lysandre-loose">You fall as you faliled to defeat Lysander. Him laughing he quickly goes to your rival
+            and pushed her away. He activates the machine, and a beam engulffs around the Kalos region.</p>
+
+        <p id="cellstay">You decided to stay in the cell, allowing Team Flare to complete their goal and take over
+            Kalos.</p>
     </section>
 
 </body>

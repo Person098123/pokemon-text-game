@@ -80,6 +80,8 @@ function attack() {
 function reveal() {
     document.getElementById("number").style.display = "block"
     document.getElementById("ches-choose").style.display = "none";
+    document.getElementById("fenn-choose").style.display = "none";
+    document.getElementById("froakie-choose").style.display = "none";
     document.getElementById("safeTimerDisplay").style.display = "block";
     document.getElementById("first-battle").style.display = "block";
 }
@@ -153,7 +155,7 @@ function retry2(){
     document.getElementById("lost").style.display = "none";
 }
 
-function lethimcook(){
+function letHimCook(){
     document.getElementById("join_flare").style.display = "block";
     document.getElementById("refuse-flare").style.display = "block";
     document.getElementById("join-flare").style.display = "block";
@@ -172,6 +174,12 @@ function lethimcook(){
     document.getElementById("rival_battle").style.display = "none";
     document.getElementById("battle_prof").style.display = "none";
     document.getElementById("evil_end").style.display = "none";
+    document.getElementById("puzzle-partone").style.display = "none";
+    document.getElementById("puzzle-parttwo").style.display = "none";
+    document.getElementById("puzzle-partthree").style.display = "none";
+    document.getElementById("puzzle-partfour").style.display = "none";
+    document.getElementById("pass-puzzle").style.display = "none";
+    document.getElementById("fail-puzzle").style.display = "none";
 }
 
 function joinChoice(){
@@ -196,4 +204,54 @@ function refuseChoice(){
     document.getElementById("chasing").style.display = "block";
     document.getElementById("refuse_flare").style.display = "block";
   
+}
+
+function followFlare(){
+    document.getElementById("accept-pur").style.display = "none";
+    document.getElementById("follow_grunt").style.display = "none";
+    document.getElementById("first-mission").style.display = "block";
+    document.getElementById("glittering_cave").style.display = "block";
+}
+
+function cave(){
+    document.getElementById("first-mission").style.display = "none";
+    document.getElementById("glittering_cave").style.display = "none";
+    document.getElementById("lost_cave").style.display = "block";
+    document.getElementById("head_straight").style.display = "block";
+}
+
+function puzzle1(){
+    document.getElementById("lost_cave").style.display = "none";
+    document.getElementById("head_straight").style.display = "none";
+    document.getElementById("puzzle-partone").style.display = "block";
+}
+
+function right1(){
+    document.getElementById("puzzle-partone").style.display = "none";
+    document.getElementById("puzzle-parttwo").style.display = "block";
+}
+
+function right2(){
+    document.getElementById("puzzle-parttwo").style.display = "none";
+    document.getElementById("puzzle-partthree").style.display = "block";
+}
+function right3(){
+    document.getElementById("puzzle-partthree").style.display = "none";
+    document.getElementById("puzzle-partfour").style.display = "block";
+}
+function right4(){
+    document.getElementById("puzzle-partfour").style.display = "none";
+    document.getElementById("pass-puzzle").style.display = "block";
+}
+
+function wrongChoice(){
+    document.getElementById("puzzle-partwo").style.display = "none";
+    document.getElementById("puzzle-partthree").style.display = "none";
+    document.getElementById("puzzle-partfour").style.display = "none";
+    document.getElementById("puzzle-partone").style.display = "none";
+    document.getElementById("fail-puzzle").style.display = "block";
+}
+function retrace(){
+    document.getElementById("puzzle-partone").style.display = "block";
+    document.getElementById("fail-puzzle").style.display = "none";
 }
