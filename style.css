@@ -1,30 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body{display: flex;
+* {
+}
+
+
+#body_game{
+     display: flex;
      justify-content: center;
+}
+#head-design{
+    display: flex;
+    justify-content: center;
 }
 
 #green{
     background-color: green;
     
 }
+
 #blue{
     background-color: skyblue;
 }
+
 #red{
     background-color: orangered;
 }
 
-#test{
-    display: none;
+strong{
+    color: aqua;
 }
 
 #number{
     border: solid;
-    display: none;
-}
-
-#nay{
-    display: none;
 }
 
 #starter{
@@ -37,62 +44,23 @@ body{display: flex;
     justify-content: space-around;
 }
 
-#ches-choose{
-    display: none;
+button {
+    background-color: red; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
 }
 
-#froakie-choose{
-    display: none;
+button:hover {
+    background-color: rgb(124, 124, 124);
+    color: black;
 }
 
-#fenn-choose{
-    display: none;
-}
-
-#yan{
-    display: none;
-}
-
-#safeTimerDisplay{
-    display: none;
-}
-
-#first-battle{
-    display: none;
-}
-
-#retry{
-    display:none;
-}
-
-#aquacorde_town{
-    display:none;
-}
-
-#choose{
-    display: none;
-}
-
-#grunt_battle{
-    display: none;
-}
-
-#continue{
-    display:none;
-}
-
-#second-battle{
-    display: none;
-}
-
-#join_flare{
-    display: none;
-}
-
-#refuse_flare{
-    display: none;
-}
-
-#champion_pathway{
+.hidden {
     display: none;
 }
