@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Text Adventure Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pokemon-sprites/pokeball_favicon-removebg-preview.png">
+
+    <script src="function.js"></script>
+</head>
+
+<body>
+    <section id="head-design">
+        <header>
+            <img src="pokemon-sprites/pokemon_logo-removebg-preview.png" alt="Pokemon Logo">
+        </header>
+    </section>
+
+    <section id="body_game">
+
+        <section id="start_game">
+            <p>
+                You wake up in your bedroom in Vanville Town, before acquiring your starter Pokemon.
+            </p>
+            <button onclick="startGame()">Start Game</button>
+        </section>
+
+        <section id="aquacorde_town" class="hidden">
+            <p>
+                You walk to Aquacorde Town, on a bright sunny day in the Kalos region.
+            </p>
+            <button onclick="aquacordeTown()">Enter Aquacorde Town</button>
+        </section>
+
+        <section id="choose" class="hidden">
+            <p>You have three choices to pick from for your starter, Froakie, Fennekin
+                and Chespin. Choose wisely as this will be more important than you think for
+                your adventure.
+            </p>
+            <section id="starter" class="hidden">
+                <button id="green" onclick="hideFunctionGreen()">Chespin</button>
+                <button id="blue" onclick="hideFunctionBlue()">Froakie</button>
+                <button id="red" onclick="hideFunctionRed()"> Fennekin</button>
+            </section>
+
+            <section id="starter-img" class="hidden">
+                <img src="pokemon-sprites/chespin.png" alt="Chespin">
+                <img src="pokemon-sprites/frokie.png" alt="Froakie">
+                <img src="pokemon-sprites/fenniken.png" alt="Fenniken">
+            </section>
+        </section>
+        <section id="ches-choose" class="hidden">
+            <p> You have chosen Chespin while your rival has chosen Fennekin. You now have to fight your rival in a
+                pokemon battle.
+            </p>
+            <button onclick="revealGreen(), timer()">Fight Rival</button>
+
+        </section>
+
+        <section id="froakie-choose" class="hidden">
+            <p> You have chosen Froakie while your rival has chosen Fennekin. You now have to fight your rival in a
+                pokemon battle.
+            </p>
+            <button onclick="revealBlue(), timer()">Fight Rival</button>
+
+        </section>
+
+        <section id="fenn-choose" class="hidden">
+            <p> You have chosen Fennekin while your rival has chosen Froakie. You now have to fight your rival in a
+                pokemon battle.
+            </p>
+            <button onclick="revealRed(), timer()">Fight Rival</button>
+
+        </section>
+
+        <section id="first-battle" class="hidden">
+            <form>
+                <button id="safeTimerDisplay" value="30">Time 00:30</button>
+                <input type="text" id="number" value="1" />
+                <input type="button" onclick="attack()" value="Attack" />
+            </form>
+        </section>
+        <p id="nay" class="hidden"> You won your rival fight and give yourself a cheer. You then dicide to move on in
+            your journey</p>
+        <p id="yan" class="hidden"> You lost the battle and scurry back to your room to heal your Pokemon.</p>
+        <button id="retry" onclick="retry()" class="hidden">Try again?</button>
+        <button id="continue" onclick="revealBady()" class="hidden">Continue</button>
+
+        <section id="grunt_battle" class="hidden">
+            <section id='badyfight' class="hidden">
+                <p id="badytext">After a fight with your rival, you encounter a Team Flare grunt. The Team Flare grunt
+                    threatens
+                    to take your Pokemon.
+                </p>
+                <button id="fight_grunt" onclick="reveal2(), timer2()">Fight Grunt</button>
+            </section>
+
+            <section id="second-battle" class="hidden">
+                <button id="safeTimerDisplaytwo">Time 00:30</button>
+                <input type="text" id="numbertwo" value="1" />
+                <input type="button" onclick="attack2()" value="Attack" />
+            </section>
+
+            <p id="won"> You won the fight agains the Team Flare grunt! As you celebrate the deafeted grunt has
+                something to
+                say to you <br> <br> <button onclick="letHimCook()"> hear him out</button></p>
+            <p id="lost"> You lost the battle and head back to your room to heal your Pokemon. <br> <br> <button
+                    onclick="retry2()">heal and try again</button>
+            </p>
+        </section>
+
+        <!--Join Team Flare Pathway-->
+        <section id="join_flare" class="hidden">
+            <section id="proposal-flare" class="hidden">
+                <p id="purposal-text"> The grunt admires your strength and how easy it was to defeat him so the Team
+                    Flare
+                    grunt
+                    has asked you to join them and help complete their goal in taking over Kalos!</p>
+                <button id="join-flare" onclick="joinChoice()">Join Team Flare</button> <br>
+                <button id="refuse-flare" onclick="refuseChoice()">Refuse</button>
+            </section>
+
+            <section id="accept-pur" class="hidden">
+                <p>You decided to join Team Flare and the grunt takes you to Team Flare's hideout.</p>
+                <button id="follow_grunt" onclick="followFlare()">Follow Team Flare Grunt</button>
+            </section>
+
+            <section id="follow-cave" class="hidden">
+                <p id="first-mission">The Team Flare grunt takes you to their base for training. You are informed your
+                    next
+                    mission is to steal
+                    Pokemon
+                    from Glittering Cave.</p>
+                <button id="glittering_cave" onclick="cave()">Follow grunt into Glittering Cave.</button>
+            </section>
+
+            <section id="lost-cave" class="hidden">
+                <p id="lost_cave">You get lost while wandering around Glittering Cave</p>
+                <button id="head_straight" onclick="puzzle1()">Head straight</button>
+            </section>
+
+            <section id="puzzle-partone" class="hidden">
+                <p>You find yourself between four paths in the cave, "<strong>I don't know how</strong> to pass this"
+                    you
+                    say to yourself but your will give it a try</p>
+
+                <button id="path-one" onclick="right1()"> path 1</button>
+                <button id="path-two" onclick="wrongChoice()">path 2</button>
+                <button id="path-three" onclick="wrongChoice()">path 3</button>
+                <button id="path-four" onclick="wrongChoice()"> path 4</button>
+            </section>
+
+            <section id="puzzle-parttwo" class="hidden">
+                <p>You belive where your going is right but there are four more paths to go through</p>
+                <button id="path-one" onclick="wrongChoice2()"> path 1</button>
+                <button id="path-two" onclick="wrongChoice2()"> path 2</button>
+                <button id="path-three" onclick="wrongChoice2()">path 3</button>
+                <button id="path-four" onclick="right2()"> path 4</button>
+
+            </section>
+
+            <section id="puzzle-partthree" class="hidden">
+                <p> You feel more sure of your progress but everything looks the same and there are four more paths to
+                    choose from</p>
+                <button id="path-one" onclick="wrongChoice3()"> path 1</button>
+                <button id="path-two" onclick="wrongChoice3()"> path 2</button>
+                <button id="path-three" onclick="wrongChoice3()">path 3</button>
+                <button id="path-four" onclick="right3()"> path 4</button>
+
+            </section>
+
+
+            <section id="puzzle-partfour" class="hidden">
+                <p>You have a gut feeling that this is the final scretch to get pass these paths. One more set of four
+                    paths
+                </p>
+                <button id="path-one" onclick="wrongChoice4()"> Path 1</button>
+                <button id="path-two" onclick="wrongChoice4()"> Path 2</button>
+                <button id="path-three" onclick="right4()">Path 3</button>
+                <button id="path-four" onclick="wrongChoice4()"> Path 4</button>
+
+            </section>
+
+            <section id="pass-puzzle" class="hidden">
+                <p>After much trial and tribulation you find your way pass the corridor of caves. As you move on you
+                    find
+                    your rival also in the cave, remembering your assignment
+                    you grin as you confront your rival
+                </p>
+                <button onclick="reveal3(), timer3()">Its time for battle</button>
+
+            </section>
+
+            <section id="third-battle" class="hidden">
+                <button id="safeTimerDisplaythree">Time 00:25</button>
+                <input type="text" id="numberthree" value="5" />
+                <input type="button" onclick="attack3()" value="Attack" />
+            </section>
+
+
+            <section id="fail-puzzle" class="hidden">
+                <p> You are completely lost and don't know how you got here. (Hint: look at the colored text at the
+                    begining, specifically, look at the number of letters)</p>
+                <button onclick="retrace()"> retrace your steps</button>
+            </section>
+
+            <section id="battle-rematchwon" class="hidden">
+                <p id="rematch">You have a furious rematch with your rival  and the results are clear as day. You are the winner
+                    and you steal their pokemon as you return to base </p>
+                <button id="beaten" onclick="goBack()">Continue</button>
+            </section>
+
+            <section id="battle-rematchlost" class="hidden">
+                <p id="rematch">You battle your rival in a furious battle and the results are clear. You lost a horrible
+                    defeat and are on the ground defeated </p>
+                <button id="retry3" onclick="retry3()">Try again</button>
+            </section>
+
+            <section id="return-base" class="hidden">
+                <p id="take_over">Time passed after fighting your rival, as you head back to the Team Flare base.</p>
+                <button id="base">Return to Team Flare Base</button>
+            </section>
+
+            <section id="stop-char" class="hidden">
+                <p id="rival_battle">Upon returning to Team Flare's base, you encounter Professor Sycammore and your
+                    rival who tries to stop you.</p>
+                <button id="battle_prof">Battle</button>
+            </section>
+
+            <section id="pass-puzzle" class="hidden">
+                <p>After much trial and tribulation you find your way pass the corridor of caves. As you move on you
+                    find
+                    your rival also in the cave, remembering your assignment
+                    you grin as you confront your rival
+                </p>
+                <button onclick="reveal4(), timer4()">Its time for battle</button>
+
+            </section>
+
+            <section id="third-battle" class="hidden">
+                <button id="safeTimerDisplaythree">Time 00:25</button>
+                <input type="text" id="numberthree" value="1" />
+                <input type="button" onclick="attack4()" value="Attack" />
+            </section>
+
+            <section id="final-battle-retry" class="hidden">
+                <p id="rematch">Refusing to give up you revive and heal your pokemon. You will not give up just yet </p>
+                <button id="retry3" onclick="retry4()">Try again</button>
+            </section>
+            <!--This will show up after winning-->
+            <p id="evil_end">You win and your rival has no more Pokemon left to fight. Team Flare's goal is
+                complete and Kalos is rebuilt in their image.</p>
+
+        </section>
+
+        <!--Against Team Flare Pathway-->
+        <section id="refuse_flare" class="hidden">
+            <section id="against_flare" class="hidden">
+                <p id="deny-pur">You refused the proposal to take over Kalos. You make a vow to take down Team
+                    Flare. You
+                    decide to chase after the grunt in Santalune Forest.</p>
+                <button id="chasing">
+                    Chase after the grunt in Santalune Forest.
+                </button>
+            </section>
+
+            <section id="find_flare">
+                <p id="aimless">You find yourself lost in the forest, wandering aimlesly.</p>
+                <button id="wandering">Wander around the forest</button>
+            </section>
+
+            <p id="blackout">After you find the grunt, you battle the grunt.</p>
+            <button id="blackout_battle">Battle</button>
+            <button id="safeTimerDisplaytwo">Time 00:</button>
+            <input type="text" id="numbertwo" value="5" />
+            <input type="button" onclick="attack2()" value="Attack" />
+
+            <p id="capture">You blacked out and got captured by Team Flare.</p>
+            <button id="wake-up">Wake Up</button>
+
+            <p id="flare-cell">You overhear Team Flare's plan for a weapon that could destroy the Kalos Region.</p>
+            <button id="listen_in">Escape</button>
+
+            <p id="escape-cell">After unlocking the cell doors, you have two decisions: Stay in the cell, leave the cell
+                and
+                escape.</p>
+            <button id="cell-stay">Stay in the Cell</button>
+
+            <p id="leave-cell">You decided to leave the cell. After leaving, you see Team Flare's leader, Lysandre. He
+                says
+                nothing will get in his way of completing his mission of taking over Kalos.</p>
+            <button id="cell-leave">Battle Lysandre</button>
+
+
+            <p id="lysandre-battle">After winning the battle, you and your rival disarm the device and celebrate as you
+                successfully saved Kalos from destruction and chaos.</p>
+
+            <p id="lysandre-loose">You fall as you faliled to defeat Lysander. Him laughing he quickly goes to your
+                rival
+                and pushed her away. He activates the machine, and a beam engulffs around the Kalos region.</p>
+
+            <p id="cellstay">You decided to stay in the cell, allowing Team Flare to complete their goal and take over
+                Kalos.</p>
+        </section>
+
+    </section>
+</body>
+
+
+</html>
