@@ -1,10 +1,5 @@
 function startGame() {
-<<<<<<< HEAD
     toggleVis(["aquacorde_town", "start_game"]);
-=======
-    toggleVis(["start_game", "aquacorde_town"]);
-
->>>>>>> a57e5c5f5ed2b47d4ed3a34e4cc612ad5f4e8d7e
 }
 
 function aquacordeTown() {
@@ -53,7 +48,7 @@ function attack() {
 }
 
 function reveal() {
-    toggleVis(["number", "safeTimerDisplay", "first-battle"]);
+    toggleVis(["number", "safeTimerDisplay", "first-battle", "ches-choose"]);
 }
 
 function retry() {
@@ -186,7 +181,7 @@ function reveal3() {
 }
 
 function retry3() {
-    toggleVis(['badyfight', 'lost'])
+    toggleVis(['badyfight', 'lost']);
 }
 
 function toggleVis(elementIDs) {

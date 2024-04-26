@@ -1,20 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 * {
-}
-
-#first-battle, #safeTimerDisplay {
-    display: none;
-}
-
-
-#body_game{
      display: flex;
-     justify-content: center;
-}
-#head-design{
-    display: flex;
     justify-content: center;
 }
 
@@ -69,4 +54,3 @@ button:hover {
 .hidden {
     display: none;
 }
-
