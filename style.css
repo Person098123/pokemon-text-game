@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
@@ -8,8 +8,7 @@
     display: none;
 }
 
-=======
->>>>>>> a57e5c5f5ed2b47d4ed3a34e4cc612ad5f4e8d7e
+
 #body_game{
      display: flex;
      justify-content: center;
