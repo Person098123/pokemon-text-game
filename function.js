@@ -1,6 +1,5 @@
 function startGame() {
     toggleVis(["start_game", "aquacorde_town"]);
-
 }
 
 function aquacordeTown() {
@@ -26,7 +25,7 @@ function timer() {
         document.getElementById('safeTimerDisplay').innerHTML = 'Time: 00:' + sec;
         sec--;
         if (sec <= 0) {
-            toggleVis(["yan", "first-battle", "safeTimerDisplay", "retry"]);
+            toggleVis(["yan", "first-battle", "retry"]);
             document.getElementById('safeTimerDisplay').innerHTML = 'Time: 00:' + sec;
             sec = 30
             clearInterval(timers)
@@ -42,16 +41,22 @@ function attack() {
     value--;
     document.getElementById('number').value = value
     if (value == 0) {
-        toggleVis(["nay", "yan", "safeTimerDisplay", "first-battle", "continue"]);
+        toggleVis(["nay", "first-battle", "continue"]);
         sec = 9999999
         clearInterval(timers)
     }
 }
 
-function reveal() {
-    toggleVis(["number", "ches-choose", "fenn-choose", "froakie-choose", "safeTimerDisplay", "first-battle"]);
+function revealGreen() {
+    toggleVis(["ches-choose", "first-battle"]);
 }
 
+function revealRed() {
+    toggleVis(["fenn-choose", "first-battle"]);
+}
+function revealBlue() {
+    toggleVis(["froakie-choose", "first-battle"]);
+}
 function retry() {
     toggleVis(["ches-choose", "retry", "yan"]);
 };
@@ -69,7 +74,7 @@ function timer2() {
 
         if (secs <= 0) {
             document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + secs;
-            toggleVis(["lost", "second-battle", "safeTimerDisplaytwo"]);
+            toggleVis(["lost", "second-battle"]);
             secs = 30;
             clearInterval(timerss);
             document.getElementById('numbertwo').value = 20;
@@ -84,7 +89,7 @@ function attack2() {
     value--;
     document.getElementById('numbertwo').value = value
     if (value == 0) {
-        toggleVis(["won", "lost", "safeTimerDisplaytwo", "second-battle"]);
+        toggleVis(["won", "second-battle"]);
         secs = 9999999
         clearInterval(timerss)
 
@@ -92,7 +97,7 @@ function attack2() {
 }
 
 function reveal2() {
-    toggleVis(["numbertwo", "badyfight", "safeTimerDisplaytwo", "second-battle"]);
+    toggleVis(["badyfight", "second-battle"]);
 }
 
 function retry2() {
@@ -100,23 +105,23 @@ function retry2() {
 }
 
 function letHimCook() {
-    toggleVis(["join_flare", "refuse-flare", "join-flare", "won", "follow_grunt", "glittering_cave", "head_straight", "accept-pur", "first-mission", "head_straight", "lost_cave", "rematch", "beaten", "take_over", "base", "rival_battle", "battle_prof", "evil_end", "puzzle-partone", "puzzle-parttwo", "puzzle-partthree", "puzzle-partfour", "pass-puzzle", "fail-puzzle"]);
+    toggleVis(["join_flare", "proposal-flare", "won", "evil_end"]);
 }
 
 function joinChoice() {
-    toggleVis(["purposal-text", "refuse-flare", "join-flare", "follow_grunt", "accept-pur"]);
+    toggleVis(["accept-pur", "proposal-flare"]);
 }
 
 function refuseChoice() {
-    toggleVis(["purposal-text", "refuse-flare", "join-flare", "wandering", "aimless", "blackout", "blackout_battle", "chasing", "deny-pur", "chasing", "refuse_flare"]);
+    //toggleVis(["purposal-text", "refuse-flare", "join-flare", "wandering", "aimless", "blackout", "blackout_battle", "chasing", "deny-pur", "chasing", "refuse_flare"]);
 }
 
 function followFlare() {
-    toggleVis(["accept-pur", "follow_grunt", "first-mission", "glittering_cave"]);
+    toggleVis(["accept-pur", "follow-cave"]);
 }
 
 function cave() {
-    toggleVis(["first-mission", "glittering_cave", "lost_cave", "head_straight"]);
+    toggleVis(["follow-cave", "lost-cave"]);
 }
 
 function puzzle1() {
@@ -139,26 +144,46 @@ function right4() {
 }
 
 function wrongChoice() {
-    toggleVis(["fail-puzzle", "puzzle-partone", "puzzle-parttwo", "puzzle-partthree", "puzzle-partfour"]);
+    toggleVis(["fail-puzzle", "puzzle-partone"]);
+}
+
+function wrongChoice2() {
+    toggleVis(["fail-puzzle", "puzzle-parttwo"]);
+}
+
+function wrongChoice3() {
+    toggleVis(["fail-puzzle", "puzzle-partthree",]);
+}
+
+function wrongChoice4() {
+    toggleVis(["fail-puzzle", "puzzle-partfour"]);
 }
 
 function retrace() {
     toggleVis(["puzzle-partone", "fail-puzzle"]);
 }
 
-var secs = 30;
-function timer2() {
+function goBack() {
+    toggleVis(["return-base", "battle-rematchwon"])
+}
 
-    var timerss = setInterval(function () {
-        document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + secs;
-        secs--;
+function stillGoBack() {
+    toggleVis(["return-base", "stop-char"])
+}
 
-        if (secs <= 0) {
-            toggleVis(["lost", "second-battle", "safeTimerDisplaytwo"]);
-            document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + secs;
-            secs = 30;
-            clearInterval(timerss);
-            document.getElementById('numbertwo').value = 20;
+var secss = 25;
+function timer3() {
+
+    var timersss = setInterval(function () {
+        document.getElementById('safeTimerDisplaythree').innerHTML = 'Time: 00:' + secss;
+        secss--;
+
+        if (secss <= 0) {
+            toggleVis(["battle-rematchlost", "third-battle", "safeTimerDisplaythree"]);
+            document.getElementById('safeTimerDisplaythree').innerHTML = 'Time: 00:' + secss;
+            secss = 30;
+            clearInterval(timersss);
+            document.getElementById('numberthree').value = 20;
 
         }
     }, 700);
@@ -166,23 +191,64 @@ function timer2() {
 
 //This code makes are attack button work when a battle starts where one click substracts one hp untill hp reaches zero and then the next code plays
 function attack3() {
-    var value = parseInt(document.getElementById('numbertwo').value);
+    var value = parseInt(document.getElementById('numberthree').value);
     value = isNaN(value) ? 0 : value;
     value--;
-    document.getElementById('numbertwo').value = value
+    document.getElementById('numberthree').value = value
     if (value == 0) {
-        toggleVis(["won", "lost", "safeTimerDisplaytwo", "second-battle"]);
-        secs = 9999999
-        clearInterval(timerss)
+        toggleVis(["battle-rematchwon", "third-battle"]);
+        secss = 9999999
+        clearInterval(timersss)
     }
 }
 
 function reveal3() {
-    toggleVis(["numbertwo", "badyfight", "safeTimerDisplaytwo", "second-battle"]);
+    toggleVis([, "pass-puzzle","third-battle"]);
 }
 
 function retry3() {
-    toggleVis(['badyfight', 'lost'])
+    toggleVis(["pass-puzzle","safeTimerDisplaythree", "battle-rematchlost"])
+}
+
+
+
+var secsss = 40;
+function timer4() {
+
+    var timerssss = setInterval(function () {
+        document.getElementById('safeTimerDisplaythree').innerHTML = 'Time: 00:' + secsss;
+        secsss--;
+
+        if (secss <= 0) {
+            toggleVis(["battle-rematchlost", "third-battle", "safeTimerDisplaythree"]);
+            document.getElementById('safeTimerDisplaythree').innerHTML = 'Time: 00:' + secsss;
+            secss = 40;
+            clearInterval(timerssss);
+            document.getElementById('numberthree').value = 20;
+
+        }
+    }, 700);
+};
+
+//This code makes are attack button work when a battle starts where one click substracts one hp untill hp reaches zero and then the next code plays
+function attack4() {
+    var value = parseInt(document.getElementById('numberfour').value);
+    value = isNaN(value) ? 0 : value;
+    value--;
+    document.getElementById('numberfour').value = value
+    if (value == 0) {
+        toggleVis(["evil_end", "fourth-battle"]);
+        secsss = 9999999
+        clearInterval(timerssss)
+    }
+}
+
+function reveal4() {
+    toggleVis([, "pass-puzzle","four-battle"]);
+}
+
+function retry4() {
+    toggleVis(["pass-puzzle","safeTimerDisplayfour", "battle-rematchlost"])
 }
 
 function toggleVis(elementIDs) {
