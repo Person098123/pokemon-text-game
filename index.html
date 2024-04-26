@@ -17,10 +17,10 @@
             <img src="pokemon-sprites/pokemon_logo-removebg-preview.png" alt="Pokemon Logo">
         </header>
     </section>
-    
-<section id="body_game">
 
-        <section id="start_game" >
+    <section id="body_game">
+
+        <section id="start_game">
             <p>
                 You wake up in your bedroom in Vanville Town, before acquiring your starter Pokemon.
             </p>
@@ -32,7 +32,6 @@
                 You walk to Aquacorde Town, on a bright sunny day in the Kalos region.
             </p>
             <button onclick="aquacordeTown()">Enter Aquacorde Town</button>
-
         </section>
 
         <section id="choose" class="hidden">
@@ -44,7 +43,6 @@
                 <button id="green" onclick="hideFunctionGreen()">Chespin</button>
                 <button id="blue" onclick="hideFunctionBlue()">Froakie</button>
                 <button id="red" onclick="hideFunctionRed()"> Fennekin</button>
-
             </section>
 
             <section id="starter-img" class="hidden">
@@ -77,10 +75,13 @@
 
         </section>
 
+<<<<<<< HEAD
+=======
 
         <section id="fight/runaway" class="hidden">
-            
+
         </section>
+>>>>>>> a57e5c5f5ed2b47d4ed3a34e4cc612ad5f4e8d7e
         <section id="first-battle" class="hidden">
             <form>
                 <button id="safeTimerDisplay" value="30">Time 00:30</button>
@@ -88,8 +89,9 @@
                 <input type="button" onclick="attack()" value="Attack" />
             </form>
         </section>
-        <p id="nay" class="hidden"> You won your rival fight and give yourself a cheer. You then dicide to move on in your journey</p>
-        <p id="yan"class="hidden"> You lost the battle and scurry back to your room to heal your Pokemon.</p>
+        <p id="nay" class="hidden"> You won your rival fight and give yourself a cheer. You then dicide to move on in
+            your journey</p>
+        <p id="yan" class="hidden"> You lost the battle and scurry back to your room to heal your Pokemon.</p>
         <button id="retry" onclick="retry()" class="hidden">Try again?</button>
         <button id="continue" onclick="revealBady()" class="hidden">Continue</button>
 
@@ -188,150 +190,159 @@
             </section>
 
         </section>
-    
 
-    <!--Join Team Flare Pathway-->
-    <section id="join_flare" class="hidden">
-        <p id="purposal-text"> The grunt admires your strength and how easy it was to defeat him so the Team Flare grunt
-            has asked you to join them and help complete their goal in taking over Kalos!</p>
-        <button id="join-flare" onclick="joinChoice()">Join Team Flare</button> <br>
-        <button id="refuse-flare" onclick="refuseChoice()">Refuse</button>
 
-        <p id="accept-pur">You decided to join Team Flare and the grunt takes you to Team Flare's hideout.</p>
-        <button id="follow_grunt" onclick="followFlare()">Follow Team Flare Grunt</button>
+        <!--Join Team Flare Pathway-->
+        <section id="join_flare" class="hidden">
+            <p id="purposal-text"> The grunt admires your strength and how easy it was to defeat him so the Team Flare
+                grunt
+                has asked you to join them and help complete their goal in taking over Kalos!</p>
+            <button id="join-flare" onclick="joinChoice()">Join Team Flare</button> <br>
+            <button id="refuse-flare" onclick="refuseChoice()">Refuse</button>
 
-        <p id="first-mission">The Team Flare grunt takes you to their base for training. You are informed your next
-            mission is to steal
-            Pokemon
-            from Glittering Cave.</p>
-        <button id="glittering_cave" onclick="cave()">Follow grunt into Glittering Cave.</button>
+            <p id="accept-pur">You decided to join Team Flare and the grunt takes you to Team Flare's hideout.</p>
+            <button id="follow_grunt" onclick="followFlare()">Follow Team Flare Grunt</button>
 
-        <p id="lost_cave">You get lost while wandering around Glittering Cave</p>
-        <button id="head_straight" onclick="puzzle1()">Head straight</button>
-        <section id="puzzle-partone">
-            <p>You find yourself between four paths in the cave, "<strong>I don't know how</strong> to pass this" you
-                say to yourself but your will give it a try</p>
+            <p id="first-mission">The Team Flare grunt takes you to their base for training. You are informed your next
+                mission is to steal
+                Pokemon
+                from Glittering Cave.</p>
+            <button id="glittering_cave" onclick="cave()">Follow grunt into Glittering Cave.</button>
 
-            <button id="path-one" onclick="right1()"> path 1</button>
-            <button id="path-two" onclick="wrongChoice()">path 2</button>
-            <button id="path-three" onclick="wrongChoice()">path 3</button>
-            <button id="path-four" onclick="wrongChoice()"> path 4</button>
+            <p id="lost_cave">You get lost while wandering around Glittering Cave</p>
+            <button id="head_straight" onclick="puzzle1()">Head straight</button>
+            <section id="puzzle-partone">
+                <p>You find yourself between four paths in the cave, "<strong>I don't know how</strong> to pass this"
+                    you
+                    say to yourself but your will give it a try</p>
+
+                <button id="path-one" onclick="right1()"> path 1</button>
+                <button id="path-two" onclick="wrongChoice()">path 2</button>
+                <button id="path-three" onclick="wrongChoice()">path 3</button>
+                <button id="path-four" onclick="wrongChoice()"> path 4</button>
+            </section>
+
+            <section id="puzzle-parttwo">
+                <p>You belive where your going is right but there are four more paths to go through</p>
+                <button id="path-one" onclick="wrongChoice()"> path 1</button>
+                <button id="path-two" onclick="wrongChoice()"> path 2</button>
+                <button id="path-three" onclick="wrongChoice()">path 3</button>
+                <button id="path-four" onclick="right2()"> path 4</button>
+
+            </section>
+
+            <section id="puzzle-partthree">
+                <p> You feel more sure of your progress but everything looks the same and there are four more paths to
+                    choose from</p>
+                <button id="path-one" onclick="wrongChoice()"> path 1</button>
+                <button id="path-two" onclick="wrongChoice()"> path 2</button>
+                <button id="path-three" onclick="wrongChoice()">path 3</button>
+                <button id="path-four" onclick="right3()"> path 4</button>
+
+            </section>
+
+
+            <section id="puzzle-partfour">
+                <p>You have a gut feeling that this is the final scretch to get pass these paths. One more set of four
+                    paths
+                </p>
+                <button id="path-one" onclick="wrongChoice()"> Path 1</button>
+                <button id="path-two" onclick="wrongChoice()"> Path 2</button>
+                <button id="path-three" onclick="right4()">Path 3</button>
+                <button id="path-four" onclick="wrongChoice()"> Path 4</button>
+
+            </section>
+
+            <section id="pass-puzzle">
+                <p>After much trial and tribulation you find your way pass the corridor of caves. As you move on you
+                    find
+                    your rival also in the cave, remembering your assignment
+                    you grin as you confront your rival
+                </p>
+                <button onclick="reveal3(), timer3()">Its time for battle</button>
+
+            </section>
+
+            <section id="third-battle">
+                <button id="safeTimerDisplaytwo">Time 00:25</button>
+                <input type="text" id="numbertwo" value="30" />
+                <input type="button" onclick="attack3()" value="Attack" />
+            </section>
+
+
+            <section id="fail-puzzle">
+                <p> You are completely lost and don't know how you got here. (Hint: look at the colored text at the
+                    begining, specifically, look at the number of letters)</p>
+                <button onclick="retrace()"> retrace your steps</button>
+            </section>
+
+            <p id="rematch">You battle your rival in a furious battle and the results are clear. You are the winner. as
+                you steal your pokemon and return to base </p>
+            <button id="beaten">Continue</button>
+
+            <p id="take_over">Time passed after fighting your rival, as you head back to the Team Flare base.</p>
+            <button id="base">Return to Team Flare Base</button>
+
+            <p id="rival_battle">Upon returning to Team Flare's base, you encounter Professor Sycammore and your rival
+                who
+                tries to stop you.</p>
+            <button id="battle_prof">Battle</button>
+            <!--This will show up after winning-->
+            <p id="evil_end">You win and your rival has no more Pokemon left to fight. Team Flare's goal is
+                complete and Kalos is rebuilt in their image.</p>
+
         </section>
 
-        <section id="puzzle-parttwo">
-            <p>You belive where your going is right but there are four more paths to go through</p>
-            <button id="path-one" onclick="wrongChoice()"> path 1</button>
-            <button id="path-two" onclick="wrongChoice()"> path 2</button>
-            <button id="path-three" onclick="wrongChoice()">path 3</button>
-            <button id="path-four" onclick="right2()"> path 4</button>
+        <!--Against Team Flare Pathway-->
+        <section id="refuse_flare" class="hidden">
+            <section id="against_flare" class="hidden">
+                <p id="deny-pur">You refused the proposal to take over Kalos. You make a vow to take down Team
+                    Flare. You
+                    decide to chase after the grunt in Santalune Forest.</p>
+                <button id="chasing">
+                    Chase after the grunt in Santalune Forest.
+                </button>
+            </section>
 
+            <section id="find_flare">
+                <p id="aimless">You find yourself lost in the forest, wandering aimlesly.</p>
+                <button id="wandering">Wander around the forest</button>
+            </section>
+
+            <p id="blackout">After you find the grunt, you battle the grunt.</p>
+            <button id="blackout_battle">Battle</button>
+            <button id="safeTimerDisplaytwo">Time 00:</button>
+            <input type="text" id="numbertwo" value="5" />
+            <input type="button" onclick="attack2()" value="Attack" />
+
+            <p id="capture">You blacked out and got captured by Team Flare.</p>
+            <button id="wake-up">Wake Up</button>
+
+            <p id="flare-cell">You overhear Team Flare's plan for a weapon that could destroy the Kalos Region.</p>
+            <button id="listen_in">Escape</button>
+
+            <p id="escape-cell">After unlocking the cell doors, you have two decisions: Stay in the cell, leave the cell
+                and
+                escape.</p>
+            <button id="cell-stay">Stay in the Cell</button>
+
+            <p id="leave-cell">You decided to leave the cell. After leaving, you see Team Flare's leader, Lysandre. He
+                says
+                nothing will get in his way of completing his mission of taking over Kalos.</p>
+            <button id="cell-leave">Battle Lysandre</button>
+
+            <p id="lysandre-battle">After winning the battle, you and your rival disarm the device and celebrate as you
+                successfully saved Kalos from destruction and chaos, saving the world from turning into Palworld.</p>
+
+            <p id="lysandre-loose">You fall as you faliled to defeat Lysander. He suddenly pulls out a gun, and all the
+                Pokemon have turned into Pals with weapons, threatening to turn the world of Pokemon into Palworld.</p>
+
+            <p id="cellstay">You decided to stay in the cell, allowing Team Flare to complete their goal and take over
+                Kalos. All the technology fades away, with the world turning ancient. The Pokemon logo goes away,
+                turning into Palworld.</p>
         </section>
-
-        <section id="puzzle-partthree">
-            <p> You feel more sure of your progress but everything looks the same and there are four more paths to
-                choose from</p>
-            <button id="path-one" onclick="wrongChoice()"> path 1</button>
-            <button id="path-two" onclick="wrongChoice()"> path 2</button>
-            <button id="path-three" onclick="wrongChoice()">path 3</button>
-            <button id="path-four" onclick="right3()"> path 4</button>
-
-        </section>
-
-
-        <section id="puzzle-partfour">
-            <p>You have a gut feeling that this is the final scretch to get pass these paths. One more set of four paths
-            </p>
-            <button id="path-one" onclick="wrongChoice()"> Path 1</button>
-            <button id="path-two" onclick="wrongChoice()"> Path 2</button>
-            <button id="path-three" onclick="right4()">Path 3</button>
-            <button id="path-four" onclick="wrongChoice()"> Path 4</button>
-
-        </section>
-
-        <section id="pass-puzzle">
-            <p>After much trial and tribulation you find your way pass the corridor of caves. As you move on you find
-                your rival also in the cave, remembering your assignment
-                you grin as you confront your rival
-            </p>
-            <button onclick="reveal3(), timer3()">Its time for battle</button>
-
-        </section>
-
-        <section id="third-battle">
-            <button id="safeTimerDisplaytwo">Time 00:25</button>
-            <input type="text" id="numbertwo" value="30" />
-            <input type="button" onclick="attack3()" value="Attack" />
-        </section>
-
-
-        <section id="fail-puzzle">
-            <p> You are completely lost and don't know how you got here. (Hint: look at the colored text at the begining, specifically, look at the number of letters)</p>
-            <button onclick="retrace()"> retrace your steps</button>
-        </section>
-
-        <p id="rematch">You battle your rival in a furious battle and the results are clear. You are the winner. as you steal your pokemon and return to base </p>
-        <button id="beaten">Continue</button>
-
-        <p id="take_over">Time passed after fighting your rival, as you head back to the Team Flare base.</p>
-        <button id="base">Return to Team Flare Base</button>
-
-        <p id="rival_battle">Upon returning to Team Flare's base, you encounter Professor Sycammore and your rival who
-            tries to stop you.</p>
-        <button id="battle_prof">Battle</button>
-        <!--This will show up after winning-->
-        <p id="evil_end">You win and your rival has no more Pokemon left to fight. Team Flare's goal is
-            complete and Kalos is rebuilt in their image.</p>
 
     </section>
-
-    <!--Against Team Flare Pathway-->
-    <section id="refuse_flare"class="hidden">
-        <section id="against_flare" class="hidden">
-            <p id="deny-pur">You refused the proposal to take over Kalos. You make a vow to take down Team
-                Flare. You
-                decide to chase after the grunt in Santalune Forest.</p>
-            <button id="chasing">
-                Chase after the grunt in Santalune Forest.
-            </button>
-        </section>
-
-        <section id="find_flare">
-            <p id="aimless">You find yourself lost in the forest, wandering aimlesly.</p>
-            <button id="wandering">Wander around the forest</button>
-        </section>
-
-        <p id="blackout">After you find the grunt, you battle the grunt.</p>
-        <button id="blackout_battle">Battle</button>
-        <button id="safeTimerDisplaytwo">Time 00:</button>
-        <input type="text" id="numbertwo" value="5" />
-        <input type="button" onclick="attack2()" value="Attack" />
-
-        <p id="capture">You blacked out and got captured by Team Flare.</p>
-        <button id="wake-up">Wake Up</button>
-
-        <p id="flare-cell">You overhear Team Flare's plan for a weapon that could destroy the Kalos Region.</p>
-        <button id="listen_in">Escape</button>
-
-        <p id="escape-cell">After unlocking the cell doors, you have two decisions: Stay in the cell, leave the cell and
-            escape.</p>
-        <button id="cell-stay">Stay in the Cell</button>
-
-        <p id="leave-cell">You decided to leave the cell. After leaving, you see Team Flare's leader, Lysandre. He says
-            nothing will get in his way of completing his mission of taking over Kalos.</p>
-        <button id="cell-leave">Battle Lysandre</button>
-
-
-        <p id="lysandre-battle">After winning the battle, you and your rival disarm the device and celebrate as you
-            successfully saved Kalos from destruction and chaos.</p>
-
-        <p id="lysandre-loose">You fall as you faliled to defeat Lysander. Him laughing he quickly goes to your rival
-            and pushed her away. He activates the machine, and a beam engulffs around the Kalos region.</p>
-
-        <p id="cellstay">You decided to stay in the cell, allowing Team Flare to complete their goal and take over
-            Kalos.</p>
-    </section>
-
-</section>
 </body>
 
 

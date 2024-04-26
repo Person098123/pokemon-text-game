@@ -1,6 +1,10 @@
 function startGame() {
-    document.getElementById("start_game").style.display = "none";
-    document.getElementById("aquacorde_town").style.display = "block";
+<<<<<<< HEAD
+    toggleVis(["aquacorde_town", "start_game"]);
+=======
+    toggleVis(["start_game", "aquacorde_town"]);
+
+>>>>>>> a57e5c5f5ed2b47d4ed3a34e4cc612ad5f4e8d7e
 }
 
 function aquacordeTown() {
@@ -25,13 +29,9 @@ function timer() {
     var timers = setInterval(function () {
         document.getElementById('safeTimerDisplay').innerHTML = 'Time: 00:' + sec;
         sec--;
-
         if (sec <= 0) {
-            document.getElementById("yan").style.display = "block";
+            toggleVis(["yan", "first-battle", "safeTimerDisplay", "retry"]);
             document.getElementById('safeTimerDisplay').innerHTML = 'Time: 00:' + sec;
-            document.getElementById("first-battle").style.display = "none";
-            document.getElementById('safeTimerDisplay').style.display = "none";
-            document.getElementById('retry').style.display = "block";
             sec = 30
             clearInterval(timers)
             document.getElementById('number').value = 15;
@@ -53,7 +53,7 @@ function attack() {
 }
 
 function reveal() {
-    toggleVis(["number", "ches-choose", "fenn-choose", "froakie-choose", "safeTimerDisplay", "first-battle"]);
+    toggleVis(["number", "safeTimerDisplay", "first-battle"]);
 }
 
 function retry() {
@@ -72,18 +72,12 @@ function timer2() {
         secs--;
 
         if (secs <= 0) {
-            document.getElementById("lost").style.display = "block";
             document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + secs;
-            document.getElementById("second-battle").style.display = "none";
-            document.getElementById('safeTimerDisplaytwo').style.display = "none";
+            toggleVis(["lost", "second-battle", "safeTimerDisplaytwo"]);
             secs = 30;
             clearInterval(timerss);
             document.getElementById('numbertwo').value = 20;
-
         }
-
-
-
     }, 700);
 };
 
@@ -94,11 +88,7 @@ function attack2() {
     value--;
     document.getElementById('numbertwo').value = value
     if (value == 0) {
-        document.getElementById("won").style.display = "block";
-        document.getElementById("lost").style.display = "none";
-        document.getElementById('safeTimerDisplaytwo').style.display = "none";
-        document.getElementById("second-battle").style.display = "none";
-
+        toggleVis(["won", "lost", "safeTimerDisplaytwo", "second-battle"]);
         secs = 9999999
         clearInterval(timerss)
 
@@ -106,115 +96,58 @@ function attack2() {
 }
 
 function reveal2() {
-    toggleVis(["numbertwo", "badyfight", "safeTimerDisplaytwo", "second-battle"])
+    toggleVis(["numbertwo", "badyfight", "safeTimerDisplaytwo", "second-battle"]);
 }
 
 function retry2() {
-    document.getElementById("badyfight").style.display = "block";
-    document.getElementById("lost").style.display = "none";
+    toggleVis(["badyfight", "lost"]);
 }
 
 function letHimCook() {
-    document.getElementById("join_flare").style.display = "block";
-    document.getElementById("refuse-flare").style.display = "block";
-    document.getElementById("join-flare").style.display = "block";
-    document.getElementById("won").style.display = "none";
-    document.getElementById("follow_grunt").style.display = "none";
-    document.getElementById('glittering_cave').style.display = "none";
-    document.getElementById("head_straight").style.display = "none";
-    document.getElementById("accept-pur").style.display = "none";
-    document.getElementById("first-mission").style.display = "none";
-    document.getElementById('head_straight').style.display = "none";
-    document.getElementById("lost_cave").style.display = "none";
-    document.getElementById("rematch").style.display = "none";
-    document.getElementById("beaten").style.display = "none";
-    document.getElementById("take_over").style.display = "none";
-    document.getElementById("base").style.display = "none";
-    document.getElementById("rival_battle").style.display = "none";
-    document.getElementById("battle_prof").style.display = "none";
-    document.getElementById("evil_end").style.display = "none";
-    document.getElementById("puzzle-partone").style.display = "none";
-    document.getElementById("puzzle-parttwo").style.display = "none";
-    document.getElementById("puzzle-partthree").style.display = "none";
-    document.getElementById("puzzle-partfour").style.display = "none";
-    document.getElementById("pass-puzzle").style.display = "none";
-    document.getElementById("fail-puzzle").style.display = "none";
+    toggleVis(["join_flare", "refuse-flare", "join-flare", "won", "follow_grunt", "glittering_cave", "head_straight", "accept-pur", "first-mission", "head_straight", "lost_cave", "rematch", "beaten", "take_over", "base", "rival_battle", "battle_prof", "evil_end", "puzzle-partone", "puzzle-parttwo", "puzzle-partthree", "puzzle-partfour", "pass-puzzle", "fail-puzzle"]);
 }
 
 function joinChoice() {
-    document.getElementById("purposal-text").style.display = "none";
-    document.getElementById("refuse-flare").style.display = "none";
-    document.getElementById("join-flare").style.display = "none";
-    document.getElementById("follow_grunt").style.display = "block"
-    document.getElementById("accept-pur").style.display = "block";
-
+    toggleVis(["purposal-text", "refuse-flare", "join-flare", "follow_grunt", "accept-pur"]);
 }
 
 function refuseChoice() {
-    document.getElementById("purposal-text").style.display = "none";
-    document.getElementById("refuse-flare").style.display = "none";
-    document.getElementById("join-flare").style.display = "none";
-    document.getElementById("wandering").style.display = "none";
-    document.getElementById("aimless").style.display = "none";
-    document.getElementById("blackout").style.display = "none";
-    document.getElementById("blackout_battle").style.display = "none";
-    document.getElementById("chasing").style.display = "block"
-    document.getElementById("deny-pur").style.display = "block";
-    document.getElementById("chasing").style.display = "block";
-    document.getElementById("refuse_flare").style.display = "block";
-
+    toggleVis(["purposal-text", "refuse-flare", "join-flare", "wandering", "aimless", "blackout", "blackout_battle", "chasing", "deny-pur", "chasing", "refuse_flare"]);
 }
 
 function followFlare() {
-    document.getElementById("accept-pur").style.display = "none";
-    document.getElementById("follow_grunt").style.display = "none";
-    document.getElementById("first-mission").style.display = "block";
-    document.getElementById("glittering_cave").style.display = "block";
+    toggleVis(["accept-pur", "follow_grunt", "first-mission", "glittering_cave"]);
 }
 
 function cave() {
-    document.getElementById("first-mission").style.display = "none";
-    document.getElementById("glittering_cave").style.display = "none";
-    document.getElementById("lost_cave").style.display = "block";
-    document.getElementById("head_straight").style.display = "block";
+    toggleVis(["first-mission", "glittering_cave", "lost_cave", "head_straight"]);
 }
 
 function puzzle1() {
-    document.getElementById("lost_cave").style.display = "none";
-    document.getElementById("head_straight").style.display = "none";
-    document.getElementById("puzzle-partone").style.display = "block";
+    toggleVis(["lost_cave", "head_straight", "puzzle-partone"]);
 }
 
 function right1() {
-    document.getElementById("puzzle-partone").style.display = "none";
-    document.getElementById("puzzle-parttwo").style.display = "block";
+    toggleVis(["puzzle-partone", "puzzle-parttwo"]);
 }
 
 function right2() {
-    document.getElementById("puzzle-parttwo").style.display = "none";
-    document.getElementById("puzzle-partthree").style.display = "block";
+    toggleVis(["puzzle-parttwo", "puzzle-partthree"]);
 }
+
 function right3() {
-    document.getElementById("puzzle-partthree").style.display = "none";
-    document.getElementById("puzzle-partfour").style.display = "block";
+    toggleVis(["puzzle-partthree", "puzzle-partfour"]);
 }
 function right4() {
-    document.getElementById("puzzle-partfour").style.display = "none";
-    document.getElementById("pass-puzzle").style.display = "block";
+    toggleVis(["puzzle-partfour", "pass-puzzle"]);
 }
 
 function wrongChoice() {
-    document.getElementById("fail-puzzle").style.display = "block";
-    document.getElementById("puzzle-partone").style.display = "none";
-    document.getElementById("puzzle-parttwo").style.display = "none";
-    document.getElementById("puzzle-partthree").style.display = "none";
-    document.getElementById("puzzle-partfour").style.display = "none";
-
+    toggleVis(["fail-puzzle", "puzzle-partone", "puzzle-parttwo", "puzzle-partthree", "puzzle-partfour"]);
 }
 
 function retrace() {
-    document.getElementById("puzzle-partone").style.display = "block";
-    document.getElementById("fail-puzzle").style.display = "none";
+    toggleVis(["puzzle-partone", "fail-puzzle"]);
 }
 
 var secs = 30;
@@ -225,10 +158,8 @@ function timer2() {
         secs--;
 
         if (secs <= 0) {
-            document.getElementById("lost").style.display = "block";
+            toggleVis(["lost", "second-battle", "safeTimerDisplaytwo"]);
             document.getElementById('safeTimerDisplaytwo').innerHTML = 'Time: 00:' + secs;
-            document.getElementById("second-battle").style.display = "none";
-            document.getElementById('safeTimerDisplaytwo').style.display = "none";
             secs = 30;
             clearInterval(timerss);
             document.getElementById('numbertwo').value = 20;
@@ -243,7 +174,7 @@ function attack3() {
     value = isNaN(value) ? 0 : value;
     value--;
     document.getElementById('numbertwo').value = value
-    if (value == 0) { 
+    if (value == 0) {
         toggleVis(["won", "lost", "safeTimerDisplaytwo", "second-battle"]);
         secs = 9999999
         clearInterval(timerss)
@@ -255,7 +186,6 @@ function reveal3() {
 }
 
 function retry3() {
-    // document.getElementById("badyfight").style.display = "block";
     toggleVis(['badyfight', 'lost'])
 }
 
