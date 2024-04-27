@@ -12,12 +12,13 @@
 </head>
 
 <body>
+                <!--this part adds the icon logo for our website-->
     <section id="head-design">
         <header>
             <img src="pokemon-sprites/pokemon_logo-removebg-preview.png" alt="Pokemon Logo">
         </header>
     </section>
-
+<!--this part adds the icon logo for our website-->
     <section id="body_game">
 
         <section id="start_game">
@@ -82,11 +83,15 @@
                 <input type="button" onclick="attack()" value="Attack" />
             </form>
         </section>
+
+        <section>
         <p id="nay" class="hidden"> You won your rival fight and give yourself a cheer. You then dicide to move on in
             your journey</p>
+            <button id="continue" onclick="revealBady()" class="hidden">Continue</button>
+        </section>
         <p id="yan" class="hidden"> You lost the battle and scurry back to your room to heal your Pokemon.</p>
         <button id="retry" onclick="retry()" class="hidden">Try again?</button>
-        <button id="continue" onclick="revealBady()" class="hidden">Continue</button>
+       
 
         <section id="grunt_battle" class="hidden">
             <section id='badyfight' class="hidden">
@@ -118,7 +123,7 @@
                     Flare
                     grunt
                     has asked you to join them and help complete their goal in taking over Kalos!</p>
-                <button id="join-flare" onclick="joinChoice()">Join Team Flare</button> <br>
+                <button id="join-flare" onclick="joinChoice()">Join Team Flare</button> <br> 
                 <button id="refuse-flare" onclick="refuseChoice()">Refuse</button>
             </section>
 
@@ -129,28 +134,26 @@
 
             <section id="follow-cave" class="hidden">
                 <p id="first-mission">The Team Flare grunt takes you to their base for training. You are informed your
-                    next
-                    mission is to steal
-                    Pokemon
-                    from Glittering Cave.</p>
-                <button id="glittering_cave" onclick="cave()">Follow grunt into Glittering Cave.</button>
+                    nextmission is to steal Pokemon from Glittering Cave.</p>
+                <button id="glittering_cave" onclick="cave()" >Follow grunt into Glittering Cave.</button>
             </section>
 
             <section id="lost-cave" class="hidden">
                 <p id="lost_cave">You get lost while wandering around Glittering Cave</p>
                 <button id="head_straight" onclick="puzzle1()">Head straight</button>
             </section>
-
+        <!--this part is the whole maze and the aftermath of it-->
             <section id="puzzle-partone" class="hidden">
                 <p>You find yourself between four paths in the cave, "<strong>I don't know how</strong> to pass this"
                     you
                     say to yourself but your will give it a try</p>
-
+                <section id="design-path">
                 <button id="path-one" onclick="right1()"> path 1</button>
                 <button id="path-two" onclick="wrongChoice()">path 2</button>
                 <button id="path-three" onclick="wrongChoice()">path 3</button>
                 <button id="path-four" onclick="wrongChoice()"> path 4</button>
             </section>
+        </section>
 
             <section id="puzzle-parttwo" class="hidden">
                 <p>You belive where your going is right but there are four more paths to go through</p>
@@ -192,10 +195,12 @@
                 <button onclick="reveal3(), timer3()">Its time for battle</button>
 
             </section>
+<!--this part is the whole maze and the aftermath of it-->
+
 
             <section id="third-battle" class="hidden">
                 <button id="safeTimerDisplaythree">Time 00:25</button>
-                <input type="text" id="numberthree" value="5" />
+                <input type="text" id="numberthree" value="1" />
                 <input type="button" onclick="attack3()" value="Attack" />
             </section>
 
@@ -220,28 +225,18 @@
 
             <section id="return-base" class="hidden">
                 <p id="take_over">Time passed after fighting your rival, as you head back to the Team Flare base.</p>
-                <button id="base">Return to Team Flare Base</button>
+                <button id="base" onclick="stillGoBack()">Return to Team Flare Base</button>
             </section>
 
             <section id="stop-char" class="hidden">
                 <p id="rival_battle">Upon returning to Team Flare's base, you encounter Professor Sycammore and your
                     rival who tries to stop you.</p>
-                <button id="battle_prof">Battle</button>
-            </section>
+                <button id="battle_prof" onclick="reveal4(), timer4()">Battle</button>
+                </section>
 
-            <section id="pass-puzzle" class="hidden">
-                <p>After much trial and tribulation you find your way pass the corridor of caves. As you move on you
-                    find
-                    your rival also in the cave, remembering your assignment
-                    you grin as you confront your rival
-                </p>
-                <button onclick="reveal4(), timer4()">Its time for battle</button>
-
-            </section>
-
-            <section id="third-battle" class="hidden">
-                <button id="safeTimerDisplaythree">Time 00:25</button>
-                <input type="text" id="numberthree" value="1" />
+            <section id="fourth-battle" class="hidden">
+                <button id="safeTimerDisplayfour">Time 00: 40</button>
+                <input type="text" id="numberfour" value="1" />
                 <input type="button" onclick="attack4()" value="Attack" />
             </section>
 
@@ -251,7 +246,7 @@
             </section>
             <!--This will show up after winning-->
             <p id="evil_end">You win and your rival has no more Pokemon left to fight. Team Flare's goal is
-                complete and Kalos is rebuilt in their image.</p>
+                complete and Kalos is rebuilt in their image. (You got the evil ending. Thank you for playing)</p>
 
         </section>
 

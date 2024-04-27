@@ -1,3 +1,13 @@
+
+@font-face{
+    font-family: "pokemon-text";
+    src: url(Pokemon-Classic.ttf)
+}
+*{
+   font-family:"pokemon-text"
+}
+
+
 #body_game{
      display: flex;
      justify-content: center;
@@ -28,6 +38,9 @@ strong{
     border: solid;
 }
 
+input{
+    border: solid;
+}
 #starter{
   display: flex;
   justify-content: space-around;
@@ -57,5 +70,20 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+#join-flare{
+    margin-bottom: 2em;
+    margin-top: .5em;
+}
+
+#path-one,#path-two,#path-three,#path-four{
+   margin: 2em; 
+}
+
+#design-path{
+    display: flex;
+    justify-content: center; 
+    
 }
 
